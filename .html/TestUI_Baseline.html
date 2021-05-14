@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */'
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #dddddd;
+  display: none;
+}
+
+table td, th {
+  text-align: left;
+  vertical-align:top;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#tableMain {
+  border: 0px solid #dddddd;
+  display: block;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<h2>International Fuel And Lubricants</h2>
+
+<table id="tableMain" class="tableMain">
+<tr>
+<th>
+<ul id="myUL">
+  <li><span class="caret">Point of Sales</span>
+    <ul class="nested">
+      <li><a href="#" onclick='show("POSHK");'>HK</a></li>
+      <li>KH</li>
+      <li>MY</li>
+      <li><a href="#" onclick='show("POSPH");'>PH</a></li>
+      <li>SG</li>
+      <li>TH</li>
+    </ul>
+  </li>
+  <li><span class="caret">Reports</span>
+    <ul class="nested">
+      <li>TBD</li>
+      <li>TBD</li>
+    </ul>
+  </li>
+  <li><span class="caret">E-Journal</span>
+    <ul class="nested">
+      <li>TBD</li>
+      <li>TBD</li>
+    </ul>
+  </li>
+</ul>
+</th>
+
+<th>
+  <table id="tablePOSPH" class="tableExecution">
+  <tr>
+    <th>Test Name</th>
+    <th>Execution Status</th>
+    <th>Execution Start</th>
+    <th>Execution End</th>
+    <th>Screenshots</th>
+  </tr>
+
+  <tr>
+    <td>Indoor_Postpay_Wetstock_Card Imprinter</td>
+    <td>Not Started</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+
+  <tr>
+    <td><a href="#" id="Hyperlink_POSPH">Indoor_Cash_No Change<a></td>
+    <!-- The Modal -->
+    <div id="myModal2" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <p>
+          <label for="TestName"><b>Test Name: Test</b></label>
+          <a id="TestName">Indoor_Cash_No Change</a>
+        </p>
+
+        <p>
+          <label for="TestDesc"><b>Test Description: </b></label>
+          <a id="TestDesc">Transaction Cash MOP</a>
+        </p>
+	
+        <label for="TestSteps"><b>Test Steps: </b><br></label>
+        <textarea id="Test Steps" rows="10" cols="100">
+Step 1	Select [Fuel point] button
+Step 2	Pick-up the nozzle of the designated fuel point and fuel grade
+Step 3	Click [Man. Pump release] button.
+Step 4	Squeeze the trigger and dispense a fuel
+Step 5	Release trigger nozzle then hangup Nozzle.
+Step 6	Click the fuel point with amount display and click orange box.
+Step 7	Click [Total] button
+Step 8	Select [Cash] button
+Step 9	At keynum, enter the <<<amount>>>
+Step 10	Click [Repeat Yes] button
+        </textarea>
+
+        <p> <button>Execute</button> </p>
+
+      </div>
+
+    </div>
+
+    <td>Not Started</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+
+  </table>
+
+  <table id="tablePOSHK" class="tableExecution">
+  <tr>
+    <th>Test Name</th>
+    <th>Execution Status</th>
+    <th>Execution Start</th>
+    <th>Execution End</th>
+    <th>Screenshots</th>
+  </tr>
+  </table>
+</th>
+</tr>
+</table>
+
+<script>
+function show(nr) {
+  var toggler = document.getElementsByClassName("tableExecution");
+  var i;
+
+  for (i = 0; i < toggler.length; i++) {
+    toggler[i].style.display="none";
+  }
+  document.getElementById("table"+nr).style.display="block";
+}
+</script>
+
+<script>
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+</script>
+
+
+    <script>
+    // Get the modal
+    var modal2 = document.getElementById("myModal2");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("Hyperlink_POSPH");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal2.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal2.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal2) {
+        modal2.style.display = "none";
+      }
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+
+<html>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+
+<head>
+  <title>IFL Testing Bot</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #F2F2F2;
+    }
+    
+    .layoutElement {
+      border:#F2F2F2; 
+      border-width:7px; 
+      border-style:solid;
+    }
+
+    header {
+      background-color: #4472C4;
+      text-align: left;
+      color: white;
+      height: 40px;
+      font-size: 35px;
+      font-weight: bold;
+      display:flex; 
+      align-items:center;
+    }
+
+    nav {
+      float: left;
+      width: 15%;
+      background: #FFFFFF;
+      height: 800px;
+      font-weight: bold;
+    }
+
+    article {
+      float: left;
+      width: 67%;
+      background-color: #FFFFFF;
+      height: 800px;
+    }
+
+    aside {
+      float: left;
+      width: 15.7%;
+      background-color: #FFFFFF;
+    }
+
+    #asideSelectedTests {
+      height: 150px;
+      text-align: center;
+    }
+
+    #asidePending {
+      height: auto;
+      text-align: center;
+    }
+
+    ul, #myUL {
+      list-style-type: none;
+      font-size: 18px;
+    }
+ 
+    #myUL {
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .listModule:hover {
+      font-size: 20px;
+    }
+
+    .listSubModule:hover {
+      font-size: 20px;
+      background-color: #F2F2F2;
+    }
+
+    .caret {
+      cursor: pointer;
+      -webkit-user-select: none; /* Safari 3.1+ */
+      -moz-user-select: none; /* Firefox 2+ */
+      -ms-user-select: none; /* IE 10+ */
+      user-select: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .nested {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      display: none;
+      margin: 20px;
+      width:97%;
+    }
+
+    table th{
+      background-color: #B4C7E7;
+      text-align: left;
+      vertical-align:middle;
+      padding: 10px;
+    }
+
+    table .thCheckBox {
+      width:2%;
+    }
+
+    table .thTestName, .thExecutionStatus, .thExecutionStart, .thExecutionEnd, .thScreenshots {
+      width:11%;
+    }
+
+    table td {
+      text-align: left;
+      vertical-align:top;
+      padding: 10px;
+      word-wrap: break-word;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 45%; /* Could be more or less, depending on screen size */
+    }
+ 
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <header class="layoutElement">
+    <img src=".images/Robot.svg" width="40" height="40">IFL Testing Bot
+  </header>
+
+  <section>
+
+    <nav class="layoutElement">
+      <ul id="myUL">
+        <li><span class="caret"><img src=".images/FuelPump.svg" width="27" height="27"><a class="listModule">&nbsp;Point of Sales</a></span>
+          <ul class="nested">
+            <li class="listSubModule"><a onclick='show("POSHK");'>HK</a></li>
+            <li class="listSubModule"><a onclick='show("POSKH");'>KH</a></li>
+            <li class="listSubModule"><a onclick='show("POSMY");'>MY</a></li>
+            <li class="listSubModule"><a onclick='show("POSPH");'>PH</a></li>
+            <li class="listSubModule"><a onclick='show("POSSG");'>SG</a></li>
+            <li class="listSubModule"><a onclick='show("POSTH");'>TH</a></li>
+          </ul>
+        </li>
+    
+        <li><span class="caret"><img src=".images/Reports.svg" width="25" height="25"><a class="listModule">&nbsp;Reports</a></span>
+          <ul class="nested">
+            <li>No items avaialable</li>
+          </ul>  
+        </li>
+    
+        <li><span class="caret"><img src=".images/Journal.svg" width="25" height="25"><a class="listModule">&nbsp;E-Journal</a></span>
+          <ul class="nested">
+            <li>No items available</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <article class="layoutElement">
+
+      <table id="tablePOSHK" class="tableExecution">
+        <caption style="text-align:left"><h2>Hongkong</h2></caption>
+        <tr>
+          <th class="thCheckBox"><input type="checkbox" onClick='check_uncheck_checkbox(this.checked, "POSPH");'/>    &nbsp;   </th>
+          <th class="thTestName">Test Name</th>
+          <th class="thExecutionStatus">Last Execution Status</th>
+          <th class="thExecutionStart">Last Execution Start</th>
+          <th class="thExecutionEnd">Last Execution End</th>
+          <th class="thScreenshots">Screenshots</th>
+        </tr>  
+
+
+      </table>
+
+      <table id="tablePOSPH" class="tableExecution">
+        <caption style="text-align:left"><h2>Philippines</h2></caption>
+        <tr>
+          <th class="thCheckBox"><input type="checkbox" onClick='check_uncheck_checkbox(this.checked, "POSPH");'/>    &nbsp;   </th>
+          <th class="thTestName">Test Name</th>
+          <th class="thExecutionStatus">Execution Status</th>
+          <th class="thExecutionStart">Execution Start</th>
+          <th class="thExecutionEnd">Execution End</th>
+          <th class="thScreenshots">Screenshots</th>
+        </tr>
+
+
+        <tr>
+          <td><input type="checkbox" name="checkboxTestScript_POSPH" class="checkboxTestScript" value="Indoor_Cash_No Change" onclick='countSelectedTests();'/>    &nbsp;   </td>
+
+          <td><a href="#" onclick='showModal("Indoor_Cash_No Change");'>Indoor_Cash_No Change<a></td>
+
+          <!-- The Modal -->
+          <div id="divModal_Indoor_Cash_No Change" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" onclick='closeModal("Indoor_Cash_No Change")'>&times;</span>
+
+              <p>
+                <label><b>Test Name: </b></label>
+                <a class="testName">Indoor_Cash_No Change</a>
+              </p>
+
+              <p>
+                <label><b>Test Description: </b></label>
+                <a>Transaction Cash MOP</a>
+              </p>	
+
+              <p>
+                <label><b>Test Module: </b></label>
+                <a class="testModule">POSPH</a>
+              </p>	
+
+              <label><b>Test Steps: </b><br></label>
+              <textarea rows="10" cols="100">
+Step 1	Select [Fuel point] button
+Step 2	Pick-up the nozzle of the designated fuel point and fuel grade
+Step 3	Click [Man. Pump release] button.
+Step 4	Squeeze the trigger and dispense a fuel
+Step 5	Release trigger nozzle then hangup Nozzle.
+Step 6	Click the fuel point with amount display and click orange box.
+Step 7	Click [Total] button
+Step 8	Select [Cash] button
+Step 9	At keynum, enter the <<<amount>>>
+Step 10	Click [Repeat Yes] button
+
+              </textarea>
+
+              <span style="display:flex; justify-content:flex-end; width:100%; padding:0;">
+                <p><input type="button" value="Close" onclick='closeModal("Indoor_Cash_No Change")'/></p>
+              </span>
+            </div>
+          </div>
+
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
+
+          <td class="executionStart">03-15-2021 17:51:49</td>
+
+          <td class="executionEnd">03-15-2021 17:53:18</td>
+
+          <td class="Screenshots"><a href="C:\temp\.screenshots\POSPH\Indoor_Cash_No Change\20210315175149">Execution ID: 20210315175149</a></td>
+        </tr>
+
+        <tr>
+          <td><input type="checkbox" name="checkboxTestScript_POSPH" class="checkboxTestScript" value="Indoor_Cash_With Change" onclick='countSelectedTests();'/>    &nbsp;   </td>
+
+          <td><a href="#" onclick='showModal("Indoor_Cash_With Change");'>Indoor_Cash_With Change<a></td>
+
+          <!-- The Modal -->
+          <div id="divModal_Indoor_Cash_With Change" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" onclick='closeModal("Indoor_Cash_With Change")'>&times;</span>
+
+              <p>
+                <label><b>Test Name: </b></label>
+                <a class="testName">Indoor_Cash_With Change</a>
+              </p>
+
+              <p>
+                <label><b>Test Description: </b></label>
+                <a>Transaction Cash MOP</a>
+              </p>	
+
+              <p>
+                <label><b>Test Module: </b></label>
+                <a class="testModule">POSPH</a>
+              </p>	
+
+              <label><b>Test Steps: </b><br></label>
+              <textarea rows="10" cols="100">
+Step 1	Select [Fuel point] button
+Step 2	Pick-up the nozzle of the designated fuel point and fuel grade
+Step 3	Click [Man. Pump release] button.
+Step 4	Squeeze the trigger and dispense a fuel
+Step 5	Release trigger nozzle then hangup Nozzle.
+Step 6	Click the fuel point with amount display and click orange box.
+Step 7	Click [Total] button
+Step 8	Select [Cash] button
+Step 9	At keynum, enter the <<<amount>>>
+Step 10	Click [Repeat Yes] button
+
+              </textarea>
+
+              <span style="display:flex; justify-content:flex-end; width:100%; padding:0;">
+                <p><input type="button" value="Close" onclick='closeModal("Indoor_Cash_With Change")'/></p>
+              </span>
+            </div>
+          </div>
+
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
+
+          <td class="executionStart">03-15-2021 17:51:49</td>
+
+          <td class="executionEnd">03-15-2021 17:53:18</td>
+
+          <td class="Screenshots"><a href="C:\temp\.screenshots\POSPH\Indoor_Cash_With Change\20210315175149">Execution ID: 20210315175149</a></td>
+        </tr>
+
+        <tr>
+          <td><input type="checkbox" name="checkboxTestScript_POSPH" class="checkboxTestScript" value="Indoor_Misc" onclick='countSelectedTests();'/>    &nbsp;   </td>
+
+          <td><a href="#" onclick='showModal("Indoor_Misc");'>Indoor_Misc<a></td>
+
+          <!-- The Modal -->
+          <div id="divModal_Indoor_Misc" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" onclick='closeModal("Indoor_Misc")'>&times;</span>
+
+              <p>
+                <label><b>Test Name: </b></label>
+                <a class="testName">Indoor_Misc</a>
+              </p>
+
+              <p>
+                <label><b>Test Description: </b></label>
+                <a>Transaction Misc MOP</a>
+              </p>	
+
+              <p>
+                <label><b>Test Module: </b></label>
+                <a class="testModule">POSPH</a>
+              </p>	
+
+              <label><b>Test Steps: </b><br></label>
+              <textarea rows="10" cols="100">
+Step 1	Lift nozzle from any fuel point.
+Step 2	Select the grey fuel point. From the fuel point menu, select [Man. Pump release]
+Step 3	[Squeeze the trigger] and dispense any amount of fuel.
+Step 4	[Release the trigger] and [Hang Up] the nozzle.
+Step 5	Select the fuel point button again.
+Step 6	Select the transaction (orange box) from the fuel point menu.
+Step 7	Click [Total] button.
+Step 8	Go to [More MOPs] > [Misc].
+Step 9	Select <<<Payment Type>>>
+Step 10	Verify receipt
+
+              </textarea>
+
+              <span style="display:flex; justify-content:flex-end; width:100%; padding:0;">
+                <p><input type="button" value="Close" onclick='closeModal("Indoor_Misc")'/></p>
+              </span>
+            </div>
+          </div>
+
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
+
+          <td class="executionStart">03-15-2021 17:51:49</td>
+
+          <td class="executionEnd">03-15-2021 17:53:18</td>
+
+          <td class="Screenshots"><a href="C:\temp\.screenshots\POSPH\Indoor_Misc\20210315175149">Execution ID: 20210315175149</a></td>
+        </tr>
+
+        <tr>
+          <td><input type="checkbox" name="checkboxTestScript_POSPH" class="checkboxTestScript" value="Indoor_MOPs_Drive Off_Wetstock" onclick='countSelectedTests();'/>    &nbsp;   </td>
+
+          <td><a href="#" onclick='showModal("Indoor_MOPs_Drive Off_Wetstock");'>Indoor_MOPs_Drive Off_Wetstock<a></td>
+
+          <!-- The Modal -->
+          <div id="divModal_Indoor_MOPs_Drive Off_Wetstock" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" onclick='closeModal("Indoor_MOPs_Drive Off_Wetstock")'>&times;</span>
+
+              <p>
+                <label><b>Test Name: </b></label>
+                <a class="testName">Indoor_MOPs_Drive Off_Wetstock</a>
+              </p>
+
+              <p>
+                <label><b>Test Description: </b></label>
+                <a>Drive Off_Wetstock</a>
+              </p>	
+
+              <p>
+                <label><b>Test Module: </b></label>
+                <a class="testModule">POSPH</a>
+              </p>	
+
+              <label><b>Test Steps: </b><br></label>
+              <textarea rows="10" cols="100">
+Step 1	Lift nozzle from any fuel point.
+Step 2	Select the grey fuel point. From the fuel point menu, select [Man. Pump release]
+Step 3	[Squeeze the trigger] and dispense any amount of fuel.
+Step 4	[Release the trigger] and [Hang Up] the nozzle.
+Step 5	Select the fuel point button again.
+Step 6	Select the transaction (orange box) from the fuel point menu.
+Step 7	Click [Total] button.
+Step 8	Go to [More MOPs] > [Drive Off].
+Step 9	Click [Yes Repeat] to confirm.
+Step 10	Verify receipt
+
+              </textarea>
+
+              <span style="display:flex; justify-content:flex-end; width:100%; padding:0;">
+                <p><input type="button" value="Close" onclick='closeModal("Indoor_MOPs_Drive Off_Wetstock")'/></p>
+              </span>
+            </div>
+          </div>
+
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
+
+          <td class="executionStart">03-15-2021 17:51:49</td>
+
+          <td class="executionEnd">03-15-2021 17:53:18</td>
+
+          <td class="Screenshots"><a href="C:\temp\.screenshots\POSPH\Indoor_MOPs_Drive Off_Wetstock\20210315175149">Execution ID: 20210315175149</a></td>
+        </tr>
+
+        <tr>
+          <td><input type="checkbox" name="checkboxTestScript_POSPH" class="checkboxTestScript" value="Indoor_MOPs_Local Account - Account name" onclick='countSelectedTests();'/>    &nbsp;   </td>
+
+          <td><a href="#" onclick='showModal("Indoor_MOPs_Local Account - Account name");'>Indoor_MOPs_Local Account - Account name<a></td>
+
+          <!-- The Modal -->
+          <div id="divModal_Indoor_MOPs_Local Account - Account name" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" onclick='closeModal("Indoor_MOPs_Local Account - Account name")'>&times;</span>
+
+              <p>
+                <label><b>Test Name: </b></label>
+                <a class="testName">Indoor_MOPs_Local Account - Account name</a>
+              </p>
+
+              <p>
+                <label><b>Test Description: </b></label>
+                <a>Local Account - Account name</a>
+              </p>	
+
+              <p>
+                <label><b>Test Module: </b></label>
+                <a class="testModule">POSPH</a>
+              </p>	
+
+              <label><b>Test Steps: </b><br></label>
+              <textarea rows="10" cols="100">
+Step 1	At POS, enter <<<Amount>>> using numpad.
+Step 2	Go to [Item Keys] > [Fuel]
+Step 3	Select any [Fuel].
+Step 4	Enter <<<Fuelpoint>>> using POS numpad. Then click [Yes Repeat] button.
+Step 5	Click [Total] button.
+Step 6	Go to [More MOPs] > [Local Account].
+Step 7	Click the button with the [keyboard icon] in numpad.
+Step 8	Go to "Account" tab.
+Step 9	Enter <<<Account>>> using the keyboard keys from POS. Then click [Yes Repeat] to search.
+Step 10	Select the "Account Name" from Sales window.
+
+              </textarea>
+
+              <span style="display:flex; justify-content:flex-end; width:100%; padding:0;">
+                <p><input type="button" value="Close" onclick='closeModal("Indoor_MOPs_Local Account - Account name")'/></p>
+              </span>
+            </div>
+          </div>
+
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
+
+          <td class="executionStart">03-15-2021 17:51:49</td>
+
+          <td class="executionEnd">03-15-2021 17:53:18</td>
+
+          <td class="Screenshots"><a href="C:\temp\.screenshots\POSPH\Indoor_MOPs_Local Account - Account name\20210315175149">Execution ID: 20210315175149</a></td>
+        </tr>
+
+        <tr>
+          <td><input type="checkbox" name="checkboxTestScript_POSPH" class="checkboxTestScript" value="Indoor_MOPs_Local Account" onclick='countSelectedTests();'/>    &nbsp;   </td>
+
+          <td><a href="#" onclick='showModal("Indoor_MOPs_Local Account");'>Indoor_MOPs_Local Account<a></td>
+
+          <!-- The Modal -->
+          <div id="divModal_Indoor_MOPs_Local Account" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" onclick='closeModal("Indoor_MOPs_Local Account")'>&times;</span>
+              <p>
+                <label><b>Test Name: </b></label>
+                <a class="testName">Indoor_MOPs_Local Account</a>
+              </p>
+
+              <p>
+                <label><b>Test Description: </b></label>
+                <a>Local Account</a>
+              </p>	
+
+              <p>
+                <label><b>Test Module: </b></label>
+                <a class="testModule">POSPH</a>
+              </p>	
+
+              <label><b>Test Steps: </b><br></label>
+              <textarea rows="10" cols="100">
+Step 1	At POS, Go to [Item Keys].
+Step 2	Select [Item].
+Step 3	Click [Total] button.
+Step 4	Go to [More MOPs] > [Local Account].
+Step 5	Enter non-existent <<<invalidLocalAccountCardNo.>>. Then click [Yes Repeat]
+Step 6	Press [C] to ignore the error message.
+Step 7	Go to [More MOPs] > [Local Account].
+Step 8	Enter a valid <<<validLocalAccountCardNo.>>>. Then click [Yes Repeat]
+Step 9	"Click [Yes Repeat] to confirm.
+If applicable, enter <<<Odometer>>>."
+
+              </textarea>
+
+              <span style="display:flex; justify-content:flex-end; width:100%; padding:0;">
+                <p><input type="button" value="Close" onclick='closeModal("Indoor_MOPs_Local Account")'/></p>
+              </span>
+            </div>
+          </div>
+
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
+
+          <td class="executionStart">03-15-2021 17:53:21</td>
+
+          <td class="executionEnd">03-15-2021 17:54:57</td>
+
+          <td class="Screenshots"><a href="C:\temp\.screenshots\POSPH\Indoor_Postpay_Wetstock_Card Imprinter\20210315175321">Execution ID: 20210315175321</a></td>
+        </tr>
+
+        <tr>
+          <td><input type="checkbox" name="checkboxTestScript_POSPH" class="checkboxTestScript" value="Indoor_Postpay_Wetstock_Card Imprinter" onclick='countSelectedTests();'/>    &nbsp;   </td>
+
+          <td><a href="#" onclick='showModal("Indoor_Postpay_Wetstock_Card Imprinter");'>Indoor_Postpay_Wetstock_Card Imprinter<a></td>
+
+          <!-- The Modal -->
+          <div id="divModal_Indoor_Postpay_Wetstock_Card Imprinter" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" onclick='closeModal("Indoor_Postpay_Wetstock_Card Imprinter")'>&times;</span>
+
+              <p>
+                <label><b>Test Name: </b></label>
+                <a class="testName">Indoor_Postpay_Wetstock_Card Imprinter</a>
+              </p>
+
+              <p>
+                <label><b>Test Description: </b></label>
+                <a>Transaction Card Imprinter MOP</a>
+              </p>	
+
+              <p>
+                <label><b>Test Module: </b></label>
+                <a class="testModule">POSPH</a>
+              </p>	
+
+              <label><b>Test Steps: </b><br></label>
+              <textarea rows="10" cols="100">
+Step 1	Lift nozzle from any fuel point.
+Step 2	Select the grey fuel point. From the fuel point menu, select [Man. Pump release]
+Step 3	[Squeeze the trigger] and dispense any amount of fuel.
+Step 4	[Release the trigger] and [Hang Up] the nozzle.
+Step 5	Select the [Fuel Point] button again.
+Step 6	Select the transaction (orange box) from the fuel point menu.
+Step 7	Click [Total] button.
+Step 8	Go to [More MOPs] > [Card Imprinter].
+Step 9	Select any <<<card type>>>.
+Step 10	Check receipt.
+
+              </textarea>
+
+              <span style="display:flex; justify-content:flex-end; width:100%; padding:0;">
+                <p><input type="button" value="Close" onclick='closeModal("Indoor_Postpay_Wetstock_Card Imprinter")'/></p>
+              </span>
+            </div>
+          </div>
+
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
+
+          <td class="executionStart">03-15-2021 17:51:49</td>
+
+          <td class="executionEnd">03-15-2021 17:53:18</td>
+
+          <td class="Screenshots"><a href="C:\temp\.screenshots\POSPH\Indoor_Postpay_Wetstock_Card Imprinter\20210315175149">Execution ID: 20210315175149</a></td>
+        </tr>
+
+        <tr>
+          <td><input type="checkbox" name="checkboxTestScript_POSPH" class="checkboxTestScript" value="Indoor_Postpay_Wetstock_Coupon" onclick='countSelectedTests();'/>    &nbsp;   </td>
+
+          <td><a href="#" onclick='showModal("Indoor_Postpay_Wetstock_Coupon");'>Indoor_Postpay_Wetstock_Coupon<a></td>
+
+          <!-- The Modal -->
+          <div id="divModal_Indoor_Postpay_Wetstock_Coupon" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" onclick='closeModal("Indoor_Postpay_Wetstock_Coupon")'>&times;</span>
+
+              <p>
+                <label><b>Test Name: </b></label>
+                <a class="testName">Indoor_Postpay_Wetstock_Coupon</a>
+              </p>
+
+              <p>
+                <label><b>Test Description: </b></label>
+                <a>Indoor_Postpay_Wetstock_Coupon</a>
+              </p>	
+
+              <p>
+                <label><b>Test Module: </b></label>
+                <a class="testModule">POSPH</a>
+              </p>	
+
+              <label><b>Test Steps: </b><br></label>
+              <textarea rows="10" cols="100">
+Step 1	Pick-up the nozzle of the designated fuel point and fuel grade
+Step 2	Click Fuelpoint button and click [Man. Pump Test] button
+Step 3	Squeeze the trigger and dispense a fuel
+Step 4	Release trigger nozzle.
+Step 5	Hang up the nozzle
+Step 6	Click the [Fuel Point] button.
+Step 7	Click [Total] button
+Step 8	Select [More MOPs] button
+Step 9	Select [Value Voucher] button
+Step 11	Select <<<Coupon>>>
+
+              </textarea>
+
+              <span style="display:flex; justify-content:flex-end; width:100%; padding:0;">
+                <p><input type="button" value="Close" onclick='closeModal("Indoor_Postpay_Wetstock_Coupon")'/></p>
+              </span>
+            </div>
+          </div>
+
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
+
+          <td class="executionStart">03-15-2021 17:51:49</td>
+
+          <td class="executionEnd">03-15-2021 17:53:18</td>
+
+          <td class="Screenshots"><a href="C:\temp\.screenshots\POSPH\Indoor_Postpay_Wetstock_Coupon\20210315175149">Execution ID: 20210315175149</a></td>
+        </tr>
+
+      </table>
+
+    </article>
+
+    <aside class="layoutElement" id="asideSelectedTests">
+      <div>
+        <b><br><br>
+        <a id="aNumberOfSelectedTests" style="font-size: 30px;">0</a><a> selected tests</a><br><br>
+        <button id="buttonExecute" onclick='displayMiniBot();'>Execute Test Scripts</button>
+      </div>
+    </aside>
+
+    <aside class="layoutElement" id="asidePending">
+      <div>
+        <label for="pendingTest"><b><br><br>Pending: </b></label>
+        <a id="pendingTest"><br>None<br></a><br><br>
+      </div>
+    </aside>
+
+  </section>
+
+  <footer>
+    <p></p>
+  </footer>
+
+  <script>
+    var toggler = document.getElementsByClassName("caret");
+    var i;  
+    for (i = 0; i < toggler.length; i++) {
+      toggler[i].addEventListener("click", function() {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+      });
+    }
+
+    function show(nr) {
+      var toggler = document.getElementsByClassName("tableExecution");
+      var i;
+      for (i = 0; i < toggler.length; i++) {
+        toggler[i].style.display="none";
+      }
+      document.getElementById("table"+nr).style.display="block";
+    }
+
+    function displayMiniBot() {
+      var myWindow = window.open("",'NewWin', 'toolbar=no,status=no,width=250,height=100,titlebar=no,top=50,left=1600,location=no');
+      myWindow.document.write("<html>");
+      myWindow.document.write("<head>");
+      myWindow.document.write("<title>IFL Tester Bot</title>");
+      myWindow.document.write("<style>");
+      myWindow.document.write("body {background-size: 250px 100px; background-image: url('.images/Monitor.png');}");
+      myWindow.document.write("</style>");
+      myWindow.document.write("</head>");
+      myWindow.document.write("<body><img src='.images/click.gif' width='250' height='100'></body>");
+      myWindow.document.write("</html>");
+
+      var pendingHTML = "<br>";
+        $('input[class="checkboxTestScript"]').each(function() { 
+          if(this.checked==true){
+            pendingHTML += this.value+"<br>";
+            document.getElementById("pendingTest").innerHTML = pendingHTML;
+          }
+        });
+    } 
+
+    function showModal(nr) {
+      var toggler = document.getElementsByClassName("modal");
+      var i;
+  
+      for (i = 0; i < toggler.length; i++) {
+         toggler[i].style.display="none";
+         toggler[i].setAttribute("class", "modalHidden");
+      }
+      document.getElementById("divModal_"+nr).style.display="block";
+      document.getElementById("divModal_"+nr).setAttribute("class", "modal");
+    }
+
+    function closeModal(nr) {
+      var toggler = document.getElementsByClassName("modal");
+      var i;
+      for (i = 0; i < toggler.length; i++) {
+        toggler[i].style.display="none";
+      }
+      document.getElementById("divModal_"+nr).style.display="none";
+    }
+
+    function check_uncheck_checkbox() {
+      var module = arguments[1]
+      if(arguments[0]) {
+        $('input[class="checkboxTestScript"]').each(function() { 
+          if(this.name=="checkboxTestScript_"+module){
+            this.checked = true;
+          }
+        });
+      } else {
+        $('input[class="checkboxTestScript"]').each(function() {
+          if(this.name=="checkboxTestScript_"+module){
+            this.checked = false;
+          }
+        });
+      }
+
+      countSelectedTests();
+    }
+
+    function countSelectedTests() {
+      var toggler = document.getElementsByClassName("checkboxTestScript");
+      var i;
+      var count=0;
+
+      for (i = 0; i < toggler.length; i++) {
+        if(toggler[i].checked==true) {
+          count+=1;
+        }
+      }
+      document.getElementById("aNumberOfSelectedTests").innerHTML=count; 
+    }
+  </script>
+
+</body>
+
+
+</html>
