@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1105,8655</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>986,8655</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NAMOS_CashierSignOff_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -79,7 +79,12 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="614,8244" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
             <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="572,189" sap2010:WorkflowViewState.IdRef="CalloutScope_14">
               <ui:CalloutScope.CalloutForm>
                 <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
@@ -3246,12 +3251,15 @@
             </p:CVRefresh>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="572,363" sap2010:WorkflowViewState.IdRef="TryCatch_11">
               <TryCatch.Try>
-                <p:CvGetTextWithDescriptor Descriptor="[&quot;Target: AnyWordGroup (1001,139,106,15)&quot; +&#xA;&quot;Anchor: Text '04/08/21' (1216,139,80,15)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="4f48cfb5ee910ca4e0e77e42b9f10e74" RefreshBefore="True" Result="[CashierName]" Version="V1">
+                <p:CvGetTextWithDescriptor Descriptor="[&quot;Target: AnyWordGroup (1001,139,106,15)&quot; +&#xD;&#xA;&quot;Anchor: Button (722,129,162,67)&quot; +&#xD;&#xA;&quot;Anchor: Button (722,215,161,43)&quot; +&#xD;&#xA;&quot;Anchor: Button (800,270,83,77)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Functions' (808,313,68,10)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="8517067f2a3e5b189a1c14b9d6c3cdad" RefreshBefore="True" Result="[CashierName]" Version="V1">
                   <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
-                    <uc:CvDescriptor InformativeScreenshot="4f48cfb5ee910ca4e0e77e42b9f10e74">
+                    <uc:CvDescriptor InformativeScreenshot="8517067f2a3e5b189a1c14b9d6c3cdad">
                       <uc:CvDescriptor.Anchors>
                         <x:Array Type="uc:CvElementDescriptor">
-                          <uc:CvElementDescriptor DesignTimeArea="1216, 139, 80, 15" ElementType="Text" Text="04/08/21" />
+                          <uc:CvElementDescriptor DesignTimeArea="722, 129, 162, 67" ElementType="Button" />
+                          <uc:CvElementDescriptor DesignTimeArea="722, 215, 161, 43" ElementType="Button" />
+                          <uc:CvElementDescriptor DesignTimeArea="800, 270, 83, 77" ElementType="Button" />
+                          <uc:CvElementDescriptor DesignTimeArea="808, 313, 68, 10" ElementType="Text" Text="Functions" />
                         </x:Array>
                       </uc:CvDescriptor.Anchors>
                       <uc:CvDescriptor.Target>
