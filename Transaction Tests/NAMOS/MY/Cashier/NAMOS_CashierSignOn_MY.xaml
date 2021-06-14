@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1105,9443</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1112,9303</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NAMOS_CashierSignIn_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
@@ -67,13 +67,13 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NAMOS_CashierSignOn" sap:VirtualizedContainerService.HintSize="648,9278" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="NAMOS_CashierSignOn" sap:VirtualizedContainerService.HintSize="648,9238" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="606,9186" sap2010:WorkflowViewState.IdRef="CVScope_3" Version="V1">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="606,9146" sap2010:WorkflowViewState.IdRef="CVScope_3" Version="V1">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -83,7 +83,7 @@
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="CashierName" />
             </Sequence.Variables>
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="572,229" sap2010:WorkflowViewState.IdRef="CalloutScope_29">
+            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="572,189" sap2010:WorkflowViewState.IdRef="CalloutScope_29">
               <ui:CalloutScope.CalloutForm>
                 <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
                   <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Verifying if cashier is already logged in&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_29" TimeoutInSeconds="[DelayLong]" Width="450">
@@ -447,7 +447,7 @@
             </TryCatch>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="572,288" sap2010:WorkflowViewState.IdRef="TryCatch_16">
               <TryCatch.Try>
-                <uta:VerifyExpression ContinueOnFailure="{x:Null}" KeepScreenshots="{x:Null}" ScreenshotsPath="{x:Null}" DisplayName="Verify Expression" Expression="[CashierName &lt;&gt; &quot;Strateq&quot;]" sap:VirtualizedContainerService.HintSize="534,61" sap2010:WorkflowViewState.IdRef="VerifyExpression_2" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
+                <uta:VerifyExpression ContinueOnFailure="{x:Null}" KeepScreenshots="{x:Null}" ScreenshotsPath="{x:Null}" DisplayName="Verify Expression" Expression="[CashierName &lt;&gt; &quot;Technician&quot;]" sap:VirtualizedContainerService.HintSize="534,61" sap2010:WorkflowViewState.IdRef="VerifyExpression_2" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
               </TryCatch.Try>
               <TryCatch.Catches>
                 <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="538,21" sap2010:WorkflowViewState.IdRef="Catch`1_16">
@@ -3939,7 +3939,7 @@
             </TryCatch>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="572,288" sap2010:WorkflowViewState.IdRef="TryCatch_14">
               <TryCatch.Try>
-                <uta:VerifyExpression ContinueOnFailure="{x:Null}" KeepScreenshots="{x:Null}" ScreenshotsPath="{x:Null}" DisplayName="Verify Expression" Expression="[CashierName = &quot;Strateq&quot;]" sap:VirtualizedContainerService.HintSize="534,61" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
+                <uta:VerifyExpression ContinueOnFailure="{x:Null}" KeepScreenshots="{x:Null}" ScreenshotsPath="{x:Null}" DisplayName="Verify Expression" Expression="[CashierName = &quot;Technician&quot;]" sap:VirtualizedContainerService.HintSize="534,61" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
               </TryCatch.Try>
               <TryCatch.Catches>
                 <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="538,21" sap2010:WorkflowViewState.IdRef="Catch`1_14">

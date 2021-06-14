@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1514,2378</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1112,2305</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Indoor_Cash_No_Change_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -67,7 +67,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="IPT0011_Start Forecourt" sap:VirtualizedContainerService.HintSize="480,2213" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="IPT0011_Start Forecourt" sap:VirtualizedContainerService.HintSize="480,2240" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -114,9 +114,9 @@
         <InArgument x:TypeArguments="x:Int32" x:Key="DelayLong">[DelayLong]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,287" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,314" sap2010:WorkflowViewState.IdRef="TryCatch_6">
       <TryCatch.Try>
-        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_StopForecourt workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_48" UnSafe="False" WorkflowFileName="Transaction Tests\NAMOS\PH\Pump Control\NAMOS_StopForecourt.xaml">
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_StopForecourt workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_48" UnSafe="False" WorkflowFileName="Transaction Tests/NAMOS/Cross Country/Pump Control/NAMOS_StopForecourt.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:Int32" x:Key="DelayShort">[DelayShort]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
@@ -196,7 +196,7 @@
     </TryCatch>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,314" sap2010:WorkflowViewState.IdRef="TryCatch_4">
       <TryCatch.Try>
-        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_StartForecourt workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="Transaction Tests/NAMOS/PH/Pump Control/NAMOS_StartForecourt.xaml">
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_StartForecourt workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="Transaction Tests/NAMOS/Cross Country/Pump Control/NAMOS_StartForecourt.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:Int32" x:Key="DelayShort">[DelayShort]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
@@ -294,18 +294,10 @@
       <TryCatch.Finally>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WORD_AddToTestResult workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="Utilities\WORD_AddToTestResult.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">
-              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExecutionID" />
-            </InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="Transacation">
-              <Literal x:TypeArguments="x:String">Verify Forecourt</Literal>
-            </InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="ModuleName">
-              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ModuleName" />
-            </InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="TestName">
-              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestName" />
-            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">[ExecutionID]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="Transacation">Verify Forecourt</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="ModuleName">[ModuleName]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="TestName">[TestName]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </TryCatch.Finally>

@@ -283,7 +283,7 @@
     </ui:InvokeWorkflowFile>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,314" sap2010:WorkflowViewState.IdRef="TryCatch_4">
       <TryCatch.Try>
-        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_ReprintOnReceipt_UpArrow workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Transaction Tests/NAMOS/PH/Receipt/NAMOS_ReprintOnReceipt_UpArrow.xaml">
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_ReprintOnReceipt_UpArrow workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Transaction Tests/NAMOS/Cross Country/Receipt/NAMOS_ReprintOnReceipt_UpArrow.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:Int32" x:Key="DelayShort">[DelayShort]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>

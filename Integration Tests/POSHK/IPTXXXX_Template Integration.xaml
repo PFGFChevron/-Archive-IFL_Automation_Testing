@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1514,2470</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1112,2370</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Indoor_Cash_No_Change_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -108,22 +108,22 @@
         </ui:Target>
       </ui:CalloutScope.Target>
     </ui:CalloutScope>
-    <ui:InvokeWorkflowFile ContinueOnError="True" DisplayName="Invoke NAMOS_CashierSignOn_MY workflow" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="Transaction Tests\NAMOS\MY\Cashier\NAMOS_CashierSignOn_MY.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="True" DisplayName="Invoke NAMOS_CashierSignOn workflow" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_48" UnSafe="False" WorkflowFileName="Transaction Tests\NAMOS\Cross Country\Cashier\NAMOS_CashierSignOn.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:Int32" x:Key="DelayShort">[DelayShort]</InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="DelayLong">[DelayLong]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,314" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,314" sap2010:WorkflowViewState.IdRef="TryCatch_10">
       <TryCatch.Try>
-        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_SmartTag workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="Transaction Tests\NAMOS\MY\Purchase\NAMOS_SmartTag.xaml">
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_BuyTexamatic1L workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="Transaction Tests\NAMOS\HK\Purchase\NAMOS_BuyTexamatic1L.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:Int32" x:Key="DelayShort">[DelayShort]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -134,13 +134,13 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Catches exception" sap:VirtualizedContainerService.HintSize="408,243" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence DisplayName="Catches exception" sap:VirtualizedContainerService.HintSize="408,243" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke CURRENTSCREEN_TakeFailedScreenshot workflow" sap:VirtualizedContainerService.HintSize="366,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Utilities/CURRENTSCREEN_TakeFailedScreenshot.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke CURRENTSCREEN_TakeFailedScreenshot workflow" sap:VirtualizedContainerService.HintSize="366,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_50" UnSafe="False" WorkflowFileName="Utilities/CURRENTSCREEN_TakeFailedScreenshot.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="TestName">[TestName]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="ModuleName">[ModuleName]</InArgument>
@@ -148,16 +148,16 @@
                   <InArgument x:TypeArguments="x:Int32" x:Key="DelayLong">[DelayLong]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <TerminateWorkflow DisplayName="Terminate Workflow" Exception="[exception]" sap:VirtualizedContainerService.HintSize="366,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_6" />
+              <TerminateWorkflow DisplayName="Terminate Workflow" Exception="[exception]" sap:VirtualizedContainerService.HintSize="366,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_11" />
             </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WORD_AddToTestResult workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_28" UnSafe="False" WorkflowFileName="Utilities\WORD_AddToTestResult.xaml">
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WORD_AddToTestResult workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_51" UnSafe="False" WorkflowFileName="Utilities\WORD_AddToTestResult.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">[ExecutionID]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="Transacation">Buy Smart Tag</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="Transacation">Buy Texamatic 1L</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="ModuleName">[ModuleName]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="TestName">[TestName]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
