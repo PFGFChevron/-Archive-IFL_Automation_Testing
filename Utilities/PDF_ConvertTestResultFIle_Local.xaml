@@ -103,7 +103,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <p:WordAppendText DisplayName="Append Text" sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="WordAppendText_1" Text="[&quot;Execution End: &quot;+ExecutionEnd]" />
-            <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="434,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[&quot;.testLogs\&quot;+ModuleName+&quot;\&quot;+TestName+&quot;\&quot;+ExecutionID]" />
+            <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="434,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[&quot;.testLogs\&quot;+ModuleName+&quot;\&quot;+TestName]" />
             <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="[&quot;.testLogs\&quot;+ModuleName+&quot;\&quot;+TestName+&quot;\Test Log_&quot;+TestName+&quot;_&quot;+ExecutionID+&quot;.pdf&quot;]" sap:VirtualizedContainerService.HintSize="434,109" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
           </Sequence>
         </ActivityAction>
