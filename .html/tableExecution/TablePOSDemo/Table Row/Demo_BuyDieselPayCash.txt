@@ -39,7 +39,7 @@ N/A
             </div>
           </div>
 
-          <td class="executionStatus" style="color:gray"><b>Not Started</b></td>
+          <td class="executionStatus"  style="color:gray"><b>Not Started</b></td>
 
           <td class="executionStart">N/A</td>
 

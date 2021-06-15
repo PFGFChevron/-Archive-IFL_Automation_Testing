@@ -1,20 +1,20 @@
 
 
         <tr>
-          <td><input type="checkbox" name="checkboxTestScript_POSMY" class="checkboxTestScript" value="SET0012_Cashier SignOn" onclick='countSelectedTests();'/>    &nbsp;   </td>
+          <td><input type="checkbox" name="checkboxTestScript_POSPH" class="checkboxTestScript" value="IPT0001_Cashier SignOn" onclick='countSelectedTests();'/>    &nbsp;   </td>
 
-          <td><a href="#" onclick='showModal("SET0012_Cashier SignOn");'>SET0012_Cashier SignOn<a></td>
+          <td><a href="#" onclick='showModal("IPT0001_Cashier SignOn");'>IPT0001_Cashier SignOn<a></td>
 
           <!-- The Modal -->
-          <div id="divModal_SET0012_Cashier SignOn" class="modal">
+          <div id="divModal_IPT0001_Cashier SignOn" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
-              <span class="close" onclick='closeModal("SET0012_Cashier SignOn")'>&times;</span>
+              <span class="close" onclick='closeModal("IPT0001_Cashier SignOn")'>&times;</span>
 
               <p>
                 <label><b>Test Name: </b></label>
-                <a class="testName">SET0012_Cashier SignOn</a>
+                <a class="testName">IPT0001_Cashier SignOn</a>
               </p>
 
               <p>
@@ -24,7 +24,7 @@
 
               <p>
                 <label><b>Test Module: </b></label>
-                <a class="testModule">POSMY</a>
+                <a class="testModule">POSPH</a>
               </p>	
 
               <label><b>Test Steps: </b><br></label>
@@ -37,16 +37,16 @@ Step 4	Enter <<<Password>>>. Then Click [Yes Repeat] button.
               </textarea>
 
               <span style="display:flex; justify-content:flex-end; width:100%; padding:0;">
-                <p><input type="button" value="Close" onclick='closeModal("SET0012_Cashier SignOn")'/></p>
+                <p><input type="button" value="Close" onclick='closeModal("IPT0001_Cashier SignOn")'/></p>
               </span>
             </div>
           </div>
 
           <td class="executionStatus" style="color:green"><b>Passed</b></td>
 
-          <td class="executionStart">06-15-2021 18:18:54</td>
+          <td class="executionStart">06-01-2021 18:55:23</td>
 
-          <td class="executionEnd">06-15-2021 18:22:19</td>
+          <td class="executionEnd">06-01-2021 18:57:43</td>
 
-          <td class="Screenshots"><a id="logFile_SET0012_Cashier SignOn" href="#" onclick='showModalLogFile("SET0012_Cashier SignOn");'>Execution ID: 20210615181854</a></td>
+          <td class="Screenshots"><a id="logFile_IPT0001_Cashier SignOn" href="#" onclick='showModalLogFile("IPT0001_Cashier SignOn");'>Execution ID: 20210601185523</a></td>
         </tr>
