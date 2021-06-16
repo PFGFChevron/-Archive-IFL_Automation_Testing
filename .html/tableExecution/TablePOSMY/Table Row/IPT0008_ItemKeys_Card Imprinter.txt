@@ -49,11 +49,11 @@ button."
             </div>
           </div>
 
-          <td class="executionStatus" style="color:gray"><b>Not Started</b></td>
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
 
-          <td class="executionStart">N/A</td>
+          <td class="executionStart">06-16-2021 01:00:06</td>
 
-          <td class="executionEnd">N/A</td>
+          <td class="executionEnd">06-16-2021 01:03:07</td>
 
-          <td class="Screenshots"><a id="logFile_IPT0008_ItemKeys_Card Imprinter" href="#" onclick='showModalLogFile("IPT0008_ItemKeys_Card Imprinter");'>Execution ID: N/A</a></td>
+          <td class="Screenshots"><a id="logFile_IPT0008_ItemKeys_Card Imprinter" href="#" onclick='showModalLogFile("IPT0008_ItemKeys_Card Imprinter");'>Execution ID: 20210616010006</a></td>
         </tr>

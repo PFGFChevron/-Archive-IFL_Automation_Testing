@@ -48,11 +48,11 @@ Step 7	Finalize using any MOP.
             </div>
           </div>
 
-          <td class="executionStatus" style="color:gray"><b>Not Started</b></td>
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
 
-          <td class="executionStart">N/A</td>
+          <td class="executionStart">06-16-2021 01:27:14</td>
 
-          <td class="executionEnd">N/A</td>
+          <td class="executionEnd">06-16-2021 01:30:19</td>
 
-          <td class="Screenshots"><a id="logFile_IPT0009_ItemKeys_Misc" href="#" onclick='showModalLogFile("IPT0009_ItemKeys_Misc");'>Execution ID: N/A</a></td>
+          <td class="Screenshots"><a id="logFile_IPT0009_ItemKeys_Misc" href="#" onclick='showModalLogFile("IPT0009_ItemKeys_Misc");'>Execution ID: 20210616012714</a></td>
         </tr>
