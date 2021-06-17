@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1488,2230</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1173,2270</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NAMOS_PayCash_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -97,7 +97,7 @@
                 </ActivityFunc>
               </ui:CalloutScope.CalloutForm>
               <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='IFL Tester Bot*' /&gt;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -573,7 +573,7 @@
             </TryCatch>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_7">
               <TryCatch.Try>
-                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1052,626,85,78)&quot; +&#xA;&quot;Anchor: Button (968,626,85,77)&quot; +&#xA;&quot;Anchor: Button (969,538,84,78)&quot; +&#xA;&quot;Anchor: Text '1' (1003,559,11,30)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_7" InformativeScreenshot="b34e99f8c0b4005747f8c4bc94cf8db5" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1052,626,85,78)&quot; +&#xA;&quot;Anchor: Button (968,626,85,77)&quot; +&#xA;&quot;Anchor: Button (969,538,84,78)&quot; +&#xA;&quot;Anchor: Text '1' (1003,559,11,30)&quot; +&#xA;&quot;Anchor: Text '2' (1084,559,20,30)&quot; +&#xA;&quot;Anchor: Button (1053,535,84,81)&quot; +&#xA;&quot;Anchor: Button (1137,536,84,77)&quot; +&#xA;&quot;Anchor: Text '3' (1170,559,19,30)&quot; +&#xA;&quot;Anchor: Button (1136,626,85,79)&quot; +&#xA;&quot;Anchor: Button (970,452,81,75)&quot; +&#xA;&quot;Anchor: Text '4' (1000,471,20,30)&quot; +&#xA;&quot;Anchor: Button (1052,449,84,78)&quot; +&#xA;&quot;Anchor: Text '5' (1085,471,19,30)&quot; +&#xA;&quot;Anchor: Button (1137,449,85,79)&quot; +&#xA;&quot;Anchor: Text '6' (1169,471,20,30)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_7" InformativeScreenshot="5604c8e24badeaa54a76081bad749d4f" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -585,12 +585,23 @@
                     </ui:CursorPosition>
                   </p:CvClickWithDescriptor.CursorPosition>
                   <p:CvClickWithDescriptor.DesignTimeDescriptor>
-                    <uc:CvDescriptor InformativeScreenshot="b34e99f8c0b4005747f8c4bc94cf8db5">
+                    <uc:CvDescriptor InformativeScreenshot="5604c8e24badeaa54a76081bad749d4f">
                       <uc:CvDescriptor.Anchors>
                         <x:Array Type="uc:CvElementDescriptor">
                           <uc:CvElementDescriptor DesignTimeArea="968, 626, 85, 77" ElementType="Button" />
                           <uc:CvElementDescriptor DesignTimeArea="969, 538, 84, 78" ElementType="Button" />
                           <uc:CvElementDescriptor DesignTimeArea="1003, 559, 11, 30" ElementType="Text" Text="1" />
+                          <uc:CvElementDescriptor DesignTimeArea="1084, 559, 20, 30" ElementType="Text" Text="2" />
+                          <uc:CvElementDescriptor DesignTimeArea="1053, 535, 84, 81" ElementType="Button" />
+                          <uc:CvElementDescriptor DesignTimeArea="1137, 536, 84, 77" ElementType="Button" />
+                          <uc:CvElementDescriptor DesignTimeArea="1170, 559, 19, 30" ElementType="Text" Text="3" />
+                          <uc:CvElementDescriptor DesignTimeArea="1136, 626, 85, 79" ElementType="Button" />
+                          <uc:CvElementDescriptor DesignTimeArea="970, 452, 81, 75" ElementType="Button" />
+                          <uc:CvElementDescriptor DesignTimeArea="1000, 471, 20, 30" ElementType="Text" Text="4" />
+                          <uc:CvElementDescriptor DesignTimeArea="1052, 449, 84, 78" ElementType="Button" />
+                          <uc:CvElementDescriptor DesignTimeArea="1085, 471, 19, 30" ElementType="Text" Text="5" />
+                          <uc:CvElementDescriptor DesignTimeArea="1137, 449, 85, 79" ElementType="Button" />
+                          <uc:CvElementDescriptor DesignTimeArea="1169, 471, 20, 30" ElementType="Text" Text="6" />
                         </x:Array>
                       </uc:CvDescriptor.Anchors>
                       <uc:CvDescriptor.Target>
@@ -982,7 +993,7 @@
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ee64c374-5960-4943-bdb7-c04b1a862e00" InformativeScreenshot="4c46d5ca4f26ec89c9fe240160f95947" Selector="&lt;html title='Web Rep Console*' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ee64c374-5960-4943-bdb7-c04b1a862e00" InformativeScreenshot="4c46d5ca4f26ec89c9fe240160f95947" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='Web Rep Console*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

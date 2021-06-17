@@ -22,12 +22,12 @@
     }
 
     function displayMiniBot() {
-      var myWindow = window.open("",'NewWin', 'toolbar=no,status=no,width=250,height=100,titlebar=no,top=50,left=1600,location=no');
+      var myWindow = window.open("",'NewWin', 'toolbar=no,status=no,width=260,height=117,titlebar=no,top=50,left=1600,location=no');
       myWindow.document.write("<html>");
       myWindow.document.write("<head>");
       myWindow.document.write("<title>IFL Tester Bot</title>");
       myWindow.document.write("<style>");
-      myWindow.document.write("body {background-size: 250px 100px; background-image: url('.images/Monitor.png');}");
+      myWindow.document.write("body {background-size: 250px 105px; background-image: url('.images/Monitor.png');}");
       myWindow.document.write("</style>");
       myWindow.document.write("</head>");
       myWindow.document.write("<body><img src='.images/click.gif' width='250' height='100'></body>");
