@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="NAMOS_BuyCoolant1L" this:NAMOS_BuyCoolant1L.DelayShort="3" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:stt="clr-namespace:System.Threading.Tasks;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:uca="clr-namespace:UiPath.Callout.Activity;assembly=UiPath.Callout.Activity" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="NAMOS_PH_BuyDrystock_DeloMulti5L" this:NAMOS_PH_BuyDrystock_DeloMulti5L.DelayShort="3" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:stt="clr-namespace:System.Threading.Tasks;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:uca="clr-namespace:UiPath.Callout.Activity;assembly=UiPath.Callout.Activity" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="DelayShort" Type="InArgument(x:Int32)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>975,3455</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1488,3355</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NAMOS_BuyCoolant1L_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -61,7 +61,7 @@
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NAMOS_BuyCoolant1L" sap:VirtualizedContainerService.HintSize="514,3290" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="NAMOS_PH_BuyDrystock_DeloMulti5L" sap:VirtualizedContainerService.HintSize="514,3290" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -74,7 +74,7 @@
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_7">
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_29">
+            <ui:CalloutScope DisplayName="Callout 'Intermediate D3D Window'" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_29">
               <ui:CalloutScope.CalloutForm>
                 <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
                   <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Clicking Item Keys&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_29" TimeoutInSeconds="[DelayShort]" Width="450">
@@ -99,7 +99,7 @@
                 </ActivityFunc>
               </ui:CalloutScope.CalloutForm>
               <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='IFL Tester Bot*' /&gt;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -878,7 +878,7 @@
             </ui:CalloutScope>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_30" InformativeScreenshot="826822249a7bbc917e9216cad9a05f31" Version="V1">
               <p:CVRefresh.DesignTimeCache>
-                <uc:CVCache InformativeScreenshot="afd92a485359f812629b5bfff038efe6" LogicalPosition="0, 129" OcrText="Gurrent session: PH000000020P1&#xD;&#xA;SCREEN SHARING v 1 session&#xD;&#xA;Total&#xD;&#xA;Quantity HAV EZY NO. 2 205.00&#xD;&#xA;NO. 3&#xD;&#xA;Amount Emergency&#xD;&#xA;Day More&#xD;&#xA;Functions&#xD;&#xA;HAV 4T&#xD;&#xA;EZY L&#xD;&#xA;MULTI 5L&#xD;&#xA;CONG&#xD;&#xA;355ML&#xD;&#xA;GAS&#xD;&#xA;HAV EZY&#xD;&#xA;4T 800ML Technician&#xD;&#xA;More Item Keys&#xD;&#xA;Mops HAV&#xD;&#xA;HAV ATF - S-MATIC&#xD;&#xA;HAV 2T&#xD;&#xA;200ML&#xD;&#xA;DELO 400&#xD;&#xA;GOLD&#xD;&#xA;ULTRA L&#xD;&#xA;SUPER coo&#xD;&#xA;p L&#xD;&#xA;ULTRA L&#xD;&#xA;HAV 4T&#xD;&#xA;SUPER L 800ML&#xD;&#xA;MULTIFAK&#xD;&#xA;ISKG&#xD;&#xA;GOLD L&#xD;&#xA;TECH DSL&#xD;&#xA;CONC&#xD;&#xA;437ML&#xD;&#xA;HAV Num&#xD;&#xA;HAV 2T&#xD;&#xA;DELO XLI&#xD;&#xA;COOLANT&#xD;&#xA;SILVER L&#xD;&#xA;GOLD&#xD;&#xA;GAL&#xD;&#xA;TEXAMATIC EXT LIFE&#xD;&#xA;SUPER 4T COOLANT&#xD;&#xA;800ML 05/27/21&#xD;&#xA;Quantity&#xD;&#xA;Void Item&#xD;&#xA;Yes&#xD;&#xA;Repeat&#xD;&#xA;NO&#xD;&#xA;Total Desktop Console&#xD;&#xA;Everyone&#xD;&#xA;(18:12:47) Patricio Calacasan can now Mtew&#xD;&#xA;and control the customers screen.&#xD;&#xA;Type your message&#xD;&#xA;Credit /&#xD;&#xA;Bank Card Local&#xD;&#xA;Account&#xD;&#xA;Control" Position="0, 129" ScreenshotGuid="c89505be-274b-4b70-bac3-a33568279cad" ServerVersion="1">
+                <uc:CVCache InformativeScreenshot="afd92a485359f812629b5bfff038efe6" LogicalPosition="0, 129" OcrText="Gurrent session: PH000000020P1&#xA;SCREEN SHARING v 1 session&#xA;Total&#xA;Quantity HAV EZY NO. 2 205.00&#xA;NO. 3&#xA;Amount Emergency&#xA;Day More&#xA;Functions&#xA;HAV 4T&#xA;EZY L&#xA;MULTI 5L&#xA;CONG&#xA;355ML&#xA;GAS&#xA;HAV EZY&#xA;4T 800ML Technician&#xA;More Item Keys&#xA;Mops HAV&#xA;HAV ATF - S-MATIC&#xA;HAV 2T&#xA;200ML&#xA;DELO 400&#xA;GOLD&#xA;ULTRA L&#xA;SUPER coo&#xA;p L&#xA;ULTRA L&#xA;HAV 4T&#xA;SUPER L 800ML&#xA;MULTIFAK&#xA;ISKG&#xA;GOLD L&#xA;TECH DSL&#xA;CONC&#xA;437ML&#xA;HAV Num&#xA;HAV 2T&#xA;DELO XLI&#xA;COOLANT&#xA;SILVER L&#xA;GOLD&#xA;GAL&#xA;TEXAMATIC EXT LIFE&#xA;SUPER 4T COOLANT&#xA;800ML 05/27/21&#xA;Quantity&#xA;Void Item&#xA;Yes&#xA;Repeat&#xA;NO&#xA;Total Desktop Console&#xA;Everyone&#xA;(18:12:47) Patricio Calacasan can now Mtew&#xA;and control the customers screen.&#xA;Type your message&#xA;Credit /&#xA;Bank Card Local&#xA;Account&#xA;Control" Position="0, 129" ScreenshotGuid="c89505be-274b-4b70-bac3-a33568279cad" ServerVersion="1">
                   <uc:CVCache.CvTables>
                     <x:Array Type="uc:CvTableInfo">
                       <uc:CvTableInfo>
@@ -1288,7 +1288,7 @@
             </p:CVRefresh>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_11">
               <TryCatch.Try>
-                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (800,524,84,83)&quot; +&#xD;&#xA;&quot;Anchor: Text 'MULTI 5L' (812,568,61,10)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_32" InformativeScreenshot="caba864f02f3484aa6e2c7d7b0a153d4" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (800,524,84,83)&quot; +&#xA;&quot;Anchor: Text 'MULTI 5L' (812,568,61,10)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_32" InformativeScreenshot="caba864f02f3484aa6e2c7d7b0a153d4" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
