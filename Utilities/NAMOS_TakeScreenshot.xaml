@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>843.2,1505.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>660,1535</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TakeScreenshot_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -63,7 +63,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NAMOS_TakeScreenshot" sap:VirtualizedContainerService.HintSize="508.8,1440.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="NAMOS_TakeScreenshot" sap:VirtualizedContainerService.HintSize="510,1430" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Image" Name="Screenshot" />
       <Variable x:TypeArguments="x:String" Name="Directory" />
@@ -76,10 +76,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="467.2,191.2" sap2010:WorkflowViewState.IdRef="CalloutScope_1">
+    <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="468,189" sap2010:WorkflowViewState.IdRef="CalloutScope_1">
       <ui:CalloutScope.CalloutForm>
         <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
-          <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Taking Screenshot&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false},{&quot;label&quot;:&quot;HTML&quot;,&quot;tag&quot;:&quot;br&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;refreshOnChange&quot;:true,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;wellcontent&quot;,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,82.4" sap2010:WorkflowViewState.IdRef="CallOutActivity_1" TimeoutInSeconds="[DelayLong]" Width="450">
+          <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Taking Screenshot&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false},{&quot;label&quot;:&quot;HTML&quot;,&quot;tag&quot;:&quot;br&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;refreshOnChange&quot;:true,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;wellcontent&quot;,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_1" TimeoutInSeconds="[DelayLong]" Width="450">
             <uca:CallOutActivity.CalloutFieldsCollection>
               <scg:Dictionary x:TypeArguments="x:String, Argument" />
             </uca:CallOutActivity.CalloutFieldsCollection>
@@ -111,7 +111,7 @@
         </ui:Target>
       </ui:CalloutScope.Target>
     </ui:CalloutScope>
-    <Assign sap:VirtualizedContainerService.HintSize="467.2,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="468,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[Directory]</OutArgument>
       </Assign.To>
@@ -119,10 +119,10 @@
         <InArgument x:TypeArguments="x:String">["C:\temp\.screenshots\"+ModuleName+"\"+TestName+"\"+ExecutionID]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="467.2,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[Directory]" />
-    <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'NAMOS'" sap:VirtualizedContainerService.HintSize="467.2,107.2" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" Screenshot="[Screenshot]">
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="468,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[Directory]" />
+    <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'NAMOS'" sap:VirtualizedContainerService.HintSize="468,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" Screenshot="[Screenshot]">
       <ui:TakeScreenshot.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a23758f-396d-4071-972b-f95dd5d37ae5" InformativeScreenshot="4ae23a9ad945ad0de99e5745ef49d4a5" Selector="&lt;html app='msedge.exe' title='Web Rep Console*' /&gt;&lt;webctrl omit:tabindex='1' tag='CANVAS' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a23758f-396d-4071-972b-f95dd5d37ae5" InformativeScreenshot="f3971d8336ac1e765ccef20bdbdbf5ca" Selector="&lt;html app='msedge.exe' title='Web Rep Console - Michael Dolotallas' /&gt;&lt;webctrl tabindex='1' tag='CANVAS' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -132,7 +132,7 @@
         </ui:Target>
       </ui:TakeScreenshot.Target>
     </ui:TakeScreenshot>
-    <Assign sap:VirtualizedContainerService.HintSize="467.2,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="468,60" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[ScreenshotPath]</OutArgument>
       </Assign.To>
@@ -140,8 +140,8 @@
         <InArgument x:TypeArguments="x:String">[Directory+"\Screenshot_"+DateTime.Now.ToString("yyyyMMddHHmmss")+".png"]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:SaveImage DisplayName="Save Image" FileName="[ScreenshotPath]" sap:VirtualizedContainerService.HintSize="467.2,92.8" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[Screenshot]" />
-    <Assign sap:VirtualizedContainerService.HintSize="467.2,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <ui:SaveImage DisplayName="Save Image" FileName="[ScreenshotPath]" sap:VirtualizedContainerService.HintSize="468,92" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[Screenshot]" />
+    <Assign sap:VirtualizedContainerService.HintSize="468,60" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[Directory]</OutArgument>
       </Assign.To>
@@ -149,8 +149,8 @@
         <InArgument x:TypeArguments="x:String">["C:\temp\.testLogs\"+ModuleName+"\"+TestName+"\"+ExecutionID]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="467.2,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[Directory]" />
-    <Assign sap:VirtualizedContainerService.HintSize="467.2,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="468,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[Directory]" />
+    <Assign sap:VirtualizedContainerService.HintSize="468,60" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[TestLogPath]</OutArgument>
       </Assign.To>
@@ -158,13 +158,13 @@
         <InArgument x:TypeArguments="x:String">[Directory+"\Test Log_"+TestName+"_"+ExecutionID+".docx"]</InArgument>
       </Assign.Value>
     </Assign>
-    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[TestLogPath]" sap:VirtualizedContainerService.HintSize="467.2,195.2" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[TestLogPath]" sap:VirtualizedContainerService.HintSize="468,193" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
       <p:WordApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WordDocument">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
           </ActivityAction.Argument>
-          <p:WordAddImage DisplayName="Add Picture" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="WordAddImage_2" ImagePath="[ScreenshotPath]" />
+          <p:WordAddImage DisplayName="Add Picture" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="WordAddImage_2" ImagePath="[ScreenshotPath]" />
         </ActivityAction>
       </p:WordApplicationScope.Body>
     </p:WordApplicationScope>

@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>660,2647</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>660,3168</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NAMOS_BuyCoolant1L_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -61,20 +61,25 @@
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NAMOS_BuyDryStock" sap:VirtualizedContainerService.HintSize="514,2582" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="NAMOS_BuyDryStock" sap:VirtualizedContainerService.HintSize="514,3103" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" DisplayName="Computer Vision" sap:VirtualizedContainerService.HintSize="472,2490" sap2010:WorkflowViewState.IdRef="CVScope_6" Version="V1">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" DisplayName="Computer Vision" sap:VirtualizedContainerService.HintSize="472,3011" sap2010:WorkflowViewState.IdRef="CVScope_6" Version="V1">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_8">
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,229" sap2010:WorkflowViewState.IdRef="CalloutScope_33">
+            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_33">
               <ui:CalloutScope.CalloutForm>
                 <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
                   <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Clicking Item Keys&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false},{&quot;label&quot;:&quot;HTML&quot;,&quot;tag&quot;:&quot;br&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;refreshOnChange&quot;:true,&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;wellcontent&quot;,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_33" TimeoutInSeconds="[DelayShort]" Width="450">
@@ -111,7 +116,7 @@
             </ui:CalloutScope>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_35" InformativeScreenshot="e5c775abd318a87b01d82adeeebe5a98" Version="V1">
               <p:CVRefresh.DesignTimeCache>
-                <uc:CVCache InformativeScreenshot="0c2ca57239c8078ccf341e9060c2fb3c" LogicalPosition="133, 147" OcrText="Total&#xD;&#xA;Quantlty No cashier&#xD;&#xA;Item Emergency&#xD;&#xA;Amount R *print&#xD;&#xA;Cashier SignOn&#xD;&#xA;Please enter cashier no.&#xD;&#xA;9 7&#xD;&#xA;4&#xD;&#xA;1 8&#xD;&#xA;5&#xD;&#xA;2 9&#xD;&#xA;6&#xD;&#xA;3&#xD;&#xA;space 23/06121&#xD;&#xA;Repeat&#xD;&#xA;Cash&#xD;&#xA;Control Bank Card" Position="133, 147" ScreenshotGuid="e67eeda9-d2d4-4c30-98eb-8ed713f32f0b" ServerVersion="1">
+                <uc:CVCache InformativeScreenshot="0c2ca57239c8078ccf341e9060c2fb3c" LogicalPosition="133, 147" OcrText="Total&#xA;Quantlty No cashier&#xA;Item Emergency&#xA;Amount R *print&#xA;Cashier SignOn&#xA;Please enter cashier no.&#xA;9 7&#xA;4&#xA;1 8&#xA;5&#xA;2 9&#xA;6&#xA;3&#xA;space 23/06121&#xA;Repeat&#xA;Cash&#xA;Control Bank Card" Position="133, 147" ScreenshotGuid="e67eeda9-d2d4-4c30-98eb-8ed713f32f0b" ServerVersion="1">
                   <uc:CVCache.CvTables>
                     <x:Array Type="uc:CvTableInfo">
                       <uc:CvTableInfo>
@@ -340,7 +345,7 @@
                 </uc:CVCache>
               </p:CVRefresh.DesignTimeCache>
             </p:CVRefresh>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,520" sap2010:WorkflowViewState.IdRef="TryCatch_13">
               <TryCatch.Try>
                 <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1053,273,83,76)&quot; +&#xA;&quot;Anchor: Text 'Item Keys' (1062,305,66,13)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_34" InformativeScreenshot="1175d8d7b3d3b57491014c594cceb4f1" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
@@ -378,7 +383,7 @@
                 </p:CvClickWithDescriptor>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_13">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,104" sap2010:WorkflowViewState.IdRef="Catch`1_13">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -787,7 +792,7 @@
                 </uc:CVCache>
               </p:CVRefresh.DesignTimeCache>
             </p:CVRefresh>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_14">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,520" sap2010:WorkflowViewState.IdRef="TryCatch_14">
               <TryCatch.Try>
                 <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1052,355,85,85)&quot; +&#xA;&quot;Anchor: Text 'Elep8kg' (1066,394,54,13)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_35" InformativeScreenshot="8186512f7f2abd671495383b6357be4f" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
@@ -825,7 +830,7 @@
                 </p:CvClickWithDescriptor>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_14">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,104" sap2010:WorkflowViewState.IdRef="Catch`1_14">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -878,7 +883,7 @@
             </ui:CalloutScope>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_36" InformativeScreenshot="11eabdc190c32865b4c4614a6f58ee2d" Version="V1">
               <p:CVRefresh.DesignTimeCache>
-                <uc:CVCache InformativeScreenshot="cc19ae4313f0c5ccc9b667b35f126814" LogicalPosition="141, 155" OcrText="Total&#xD;&#xA;Quant Ity Item 2T-1L 110.00&#xD;&#xA;Amount Emergency Technician&#xD;&#xA;More&#xD;&#xA;Functions&#xD;&#xA;Haycllne&#xD;&#xA;Fullysvn&#xD;&#xA;Havollne&#xD;&#xA;sun81end&#xD;&#xA;Aayoline&#xD;&#xA;Formula&#xD;&#xA;Deloaoo&#xD;&#xA;Tex am aic Hav&#xD;&#xA;F unvsvn&#xD;&#xA;Havol•ne&#xD;&#xA;svnElend&#xD;&#xA;Hav&#xD;&#xA;Formula&#xD;&#xA;ExtanLifa&#xD;&#xA;Coolent&#xD;&#xA;Card More&#xD;&#xA;MOPs&#xD;&#xA;Ad.31ue&#xD;&#xA;Wellcome&#xD;&#xA;CashVou Item Keys&#xD;&#xA;Golden&#xD;&#xA;Elep8kg&#xD;&#xA;Watsons&#xD;&#xA;2Ecml$A1&#xD;&#xA;VitaWater&#xD;&#xA;500m' SO&#xD;&#xA;$0.5 Ouanrity&#xD;&#xA;VI tawater&#xD;&#xA;Eonaqua Void Item&#xD;&#xA;500m1348&#xD;&#xA;770m' x4&#xD;&#xA;sooml&#xD;&#xA;Starcash&#xD;&#xA;Ealance Repeat&#xD;&#xA;Cash&#xD;&#xA;Control" Position="141, 155" ScreenshotGuid="b2ae1669-8539-4883-8c84-1b72f5f0a6ab" ServerVersion="1">
+                <uc:CVCache InformativeScreenshot="cc19ae4313f0c5ccc9b667b35f126814" LogicalPosition="141, 155" OcrText="Total&#xA;Quant Ity Item 2T-1L 110.00&#xA;Amount Emergency Technician&#xA;More&#xA;Functions&#xA;Haycllne&#xA;Fullysvn&#xA;Havollne&#xA;sun81end&#xA;Aayoline&#xA;Formula&#xA;Deloaoo&#xA;Tex am aic Hav&#xA;F unvsvn&#xA;Havol•ne&#xA;svnElend&#xA;Hav&#xA;Formula&#xA;ExtanLifa&#xA;Coolent&#xA;Card More&#xA;MOPs&#xA;Ad.31ue&#xA;Wellcome&#xA;CashVou Item Keys&#xA;Golden&#xA;Elep8kg&#xA;Watsons&#xA;2Ecml$A1&#xA;VitaWater&#xA;500m' SO&#xA;$0.5 Ouanrity&#xA;VI tawater&#xA;Eonaqua Void Item&#xA;500m1348&#xA;770m' x4&#xA;sooml&#xA;Starcash&#xA;Ealance Repeat&#xA;Cash&#xA;Control" Position="141, 155" ScreenshotGuid="b2ae1669-8539-4883-8c84-1b72f5f0a6ab" ServerVersion="1">
                   <uc:CVCache.CvTables>
                     <x:Array Type="uc:CvTableInfo">
                       <uc:CvTableInfo>
@@ -1228,9 +1233,9 @@
                 </uc:CVCache>
               </p:CVRefresh.DesignTimeCache>
             </p:CVRefresh>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_15">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,520" sap2010:WorkflowViewState.IdRef="TryCatch_15">
               <TryCatch.Try>
-                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (696,440,62,59)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Cash' (599,524,68,22)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Card' (449,540,45,16)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_36" InformativeScreenshot="ee04f83e8ad734fba3f0fc40281611b6" KeyModifiers="None" MouseButton="[MouseButton.BTN_LEFT]" Version="V1">
+                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (696,440,62,59)&quot; +&#xA;&quot;Anchor: Text 'Cash' (599,524,68,22)&quot; +&#xA;&quot;Anchor: Text 'Card' (449,540,45,16)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_36" InformativeScreenshot="ee04f83e8ad734fba3f0fc40281611b6" KeyModifiers="None" MouseButton="[MouseButton.BTN_LEFT]" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -1267,7 +1272,7 @@
                 </p:CvClickWithDescriptor>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_15">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,104" sap2010:WorkflowViewState.IdRef="Catch`1_15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
