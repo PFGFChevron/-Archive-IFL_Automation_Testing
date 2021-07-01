@@ -99,7 +99,7 @@
                 </ActivityFunc>
               </ui:CalloutScope.CalloutForm>
               <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='IFL Tester Bot*' /&gt;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -111,7 +111,7 @@
             </ui:CalloutScope>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_35" InformativeScreenshot="22453f4e63b81b47647fa44bc1274581" Version="V1">
               <p:CVRefresh.DesignTimeCache>
-                <uc:CVCache InformativeScreenshot="9f6c5ffbbe0e50831c43d05dfc6965d1" LogicalPosition="0, 108" OcrText="Gurrent session: MYOOOOOOOI 5P1 sessions&#xD;&#xA;SCREEN SHARING v •49:14&#xD;&#xA;Total&#xD;&#xA;Quantity&#xD;&#xA;51.06&#xD;&#xA;Cash NO. 2&#xD;&#xA;97 Techron 120.00&#xD;&#xA;NO. 3&#xD;&#xA;Amount&#xD;&#xA;120.00 Emergency&#xD;&#xA;More&#xD;&#xA;Functions&#xD;&#xA;Reprint&#xD;&#xA;Regeipt_&#xD;&#xA;Query&#xD;&#xA;Override&#xD;&#xA;Receipt Technician&#xD;&#xA;Recall&#xD;&#xA;Layaway&#xD;&#xA;discount&#xD;&#xA;Assign&#xD;&#xA;Loyalty&#xD;&#xA;Card More&#xD;&#xA;Mops&#xD;&#xA;7&#xD;&#xA;4&#xD;&#xA;1 Item Keys&#xD;&#xA;8&#xD;&#xA;5&#xD;&#xA;2&#xD;&#xA;Space Num&#xD;&#xA;9&#xD;&#xA;6&#xD;&#xA;3&#xD;&#xA;Back-&#xD;&#xA;space 16.&#xD;&#xA;Quantity&#xD;&#xA;Void Item&#xD;&#xA;Repeat&#xD;&#xA;Yes&#xD;&#xA;NO&#xD;&#xA;Total Desktop Console&#xD;&#xA;Everyone&#xD;&#xA;(16:14:36) Patricio Calacasan can now Mtew&#xD;&#xA;and control the customers screen.&#xD;&#xA;Type your message&#xD;&#xA;Control Credit /&#xD;&#xA;Bank Card" Position="0, 108" ScreenshotGuid="f30d6f48-5056-42d6-bd55-7efe7519dbce" ServerVersion="1">
+                <uc:CVCache InformativeScreenshot="9f6c5ffbbe0e50831c43d05dfc6965d1" LogicalPosition="0, 108" OcrText="Gurrent session: MYOOOOOOOI 5P1 sessions&#xA;SCREEN SHARING v •49:14&#xA;Total&#xA;Quantity&#xA;51.06&#xA;Cash NO. 2&#xA;97 Techron 120.00&#xA;NO. 3&#xA;Amount&#xA;120.00 Emergency&#xA;More&#xA;Functions&#xA;Reprint&#xA;Regeipt_&#xA;Query&#xA;Override&#xA;Receipt Technician&#xA;Recall&#xA;Layaway&#xA;discount&#xA;Assign&#xA;Loyalty&#xA;Card More&#xA;Mops&#xA;7&#xA;4&#xA;1 Item Keys&#xA;8&#xA;5&#xA;2&#xA;Space Num&#xA;9&#xA;6&#xA;3&#xA;Back-&#xA;space 16.&#xA;Quantity&#xA;Void Item&#xA;Repeat&#xA;Yes&#xA;NO&#xA;Total Desktop Console&#xA;Everyone&#xA;(16:14:36) Patricio Calacasan can now Mtew&#xA;and control the customers screen.&#xA;Type your message&#xA;Control Credit /&#xA;Bank Card" Position="0, 108" ScreenshotGuid="f30d6f48-5056-42d6-bd55-7efe7519dbce" ServerVersion="1">
                   <uc:CVCache.CvTables>
                     <x:Array Type="uc:CvTableInfo">
                       <uc:CvTableInfo>
@@ -433,7 +433,7 @@
             </p:CVRefresh>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_13">
               <TryCatch.Try>
-                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (368,618,91,92) OffsetPoint: (96,11)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Receipt' (816,650,53,13)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_34" InformativeScreenshot="e48fc59120a101a6997223270b19be78" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (368,618,91,92) OffsetPoint: (96,11)&quot; +&#xA;&quot;Anchor: Text 'Receipt' (816,650,53,13)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_34" InformativeScreenshot="e48fc59120a101a6997223270b19be78" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -510,7 +510,7 @@
                 </ActivityFunc>
               </ui:CalloutScope.CalloutForm>
               <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='IFL Tester Bot*' /&gt;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -522,7 +522,7 @@
             </ui:CalloutScope>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_32" InformativeScreenshot="2191ead43f0b93989d5077d31a4ca06f" Version="V1">
               <p:CVRefresh.DesignTimeCache>
-                <uc:CVCache InformativeScreenshot="a4bd2c0bfbd020111b53c4e0f412c936" LogicalPosition="0, 108" OcrText="Gurrent session: MYOOOOOOOI 5P1&#xD;&#xA;SCREEN SHARING v Total&#xD;&#xA;Quantity&#xD;&#xA;51.06&#xD;&#xA;Cash sessions NO. 2&#xD;&#xA;97 Techron 120.00&#xD;&#xA;NO. 3&#xD;&#xA;Amount&#xD;&#xA;120.00 Emergency&#xD;&#xA;More&#xD;&#xA;Functions&#xD;&#xA;Status Technician&#xD;&#xA;More Item Keys&#xD;&#xA;Mops&#xD;&#xA;Fuelpoint 3&#xD;&#xA;-120.00 RM&#xD;&#xA;.51.06 Litre&#xD;&#xA;97Techron&#xD;&#xA;Stop&#xD;&#xA;Suspend Num&#xD;&#xA;Manual 16/06/21&#xD;&#xA;Quantity&#xD;&#xA;Void Item&#xD;&#xA;Repeat&#xD;&#xA;Yes&#xD;&#xA;NO&#xD;&#xA;Total&#xD;&#xA;Off Memory&#xD;&#xA;Control Desktop Console&#xD;&#xA;Everyone&#xD;&#xA;(16:14:36) Patricio Calacasan can now Mtew&#xD;&#xA;and control the customers screen.&#xD;&#xA;Type your message&#xD;&#xA;Time to Stand&#xD;&#xA;Please swtch to a standing work postiorL Click&#xD;&#xA;here for more" Position="0, 108" ScreenshotGuid="7c0e5509-5ea8-4050-b586-4d0394e1632a" ServerVersion="1">
+                <uc:CVCache InformativeScreenshot="a4bd2c0bfbd020111b53c4e0f412c936" LogicalPosition="0, 108" OcrText="Gurrent session: MYOOOOOOOI 5P1&#xA;SCREEN SHARING v Total&#xA;Quantity&#xA;51.06&#xA;Cash sessions NO. 2&#xA;97 Techron 120.00&#xA;NO. 3&#xA;Amount&#xA;120.00 Emergency&#xA;More&#xA;Functions&#xA;Status Technician&#xA;More Item Keys&#xA;Mops&#xA;Fuelpoint 3&#xA;-120.00 RM&#xA;.51.06 Litre&#xA;97Techron&#xA;Stop&#xA;Suspend Num&#xA;Manual 16/06/21&#xA;Quantity&#xA;Void Item&#xA;Repeat&#xA;Yes&#xA;NO&#xA;Total&#xA;Off Memory&#xA;Control Desktop Console&#xA;Everyone&#xA;(16:14:36) Patricio Calacasan can now Mtew&#xA;and control the customers screen.&#xA;Type your message&#xA;Time to Stand&#xA;Please swtch to a standing work postiorL Click&#xA;here for more" Position="0, 108" ScreenshotGuid="7c0e5509-5ea8-4050-b586-4d0394e1632a" ServerVersion="1">
                   <uc:CVCache.CvTables>
                     <x:Array Type="uc:CvTableInfo">
                       <uc:CvTableInfo>
@@ -852,7 +852,7 @@
             </p:CVRefresh>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_14">
               <TryCatch.Try>
-                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (804,361,80,76) OffsetPoint: (-1,73)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Status' (824,403,42,10)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_35" InformativeScreenshot="21ca9d7fa2ac9519b76dd3dfd9613285" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (804,361,80,76) OffsetPoint: (-1,73)&quot; +&#xA;&quot;Anchor: Text 'Status' (824,403,42,10)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_35" InformativeScreenshot="21ca9d7fa2ac9519b76dd3dfd9613285" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -1199,7 +1199,7 @@
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d09aa8a6-d5b1-4669-aa95-0f53bbeba833" InformativeScreenshot="14dbaea019ee9e3b9d07a09e58876a49" Selector="&lt;html title='Web Rep Console*' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d09aa8a6-d5b1-4669-aa95-0f53bbeba833" InformativeScreenshot="14dbaea019ee9e3b9d07a09e58876a49" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='Web Rep Console*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

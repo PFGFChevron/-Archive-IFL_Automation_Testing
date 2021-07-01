@@ -97,7 +97,7 @@
                 </ActivityFunc>
               </ui:CalloutScope.CalloutForm>
               <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='IFL Tester Bot*' /&gt;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -805,7 +805,7 @@
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3bea26fa-dbd5-40ce-be6d-9e191216e110" InformativeScreenshot="6eca8650f3618cfe3a12cfd6edfa037f" Selector="&lt;html title='Web Rep Console*' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3bea26fa-dbd5-40ce-be6d-9e191216e110" InformativeScreenshot="6eca8650f3618cfe3a12cfd6edfa037f" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='Web Rep Console*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

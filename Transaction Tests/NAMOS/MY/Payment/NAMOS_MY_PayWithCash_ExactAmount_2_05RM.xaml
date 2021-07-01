@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1488,2643</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1488,2603</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NAMOS_PayCash_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -97,7 +97,7 @@
                 </ActivityFunc>
               </ui:CalloutScope.CalloutForm>
               <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='IFL Tester Bot*' /&gt;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -463,7 +463,7 @@
             </p:CVRefresh>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
               <TryCatch.Try>
-                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1053,535,84,81)&quot; +&#xD;&#xA;&quot;Anchor: Text '2' (1084,559,20,30)&quot; +&#xD;&#xA;&quot;Anchor: Button (1137,536,84,77)&quot; +&#xD;&#xA;&quot;Anchor: Text '3' (1170,559,19,30)&quot; +&#xD;&#xA;&quot;Anchor: Button (1137,449,85,79)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="c7b1a2ca5a99fee792d690c5d7e2362c" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1053,535,84,81)&quot; +&#xA;&quot;Anchor: Text '2' (1084,559,20,30)&quot; +&#xA;&quot;Anchor: Button (1137,536,84,77)&quot; +&#xA;&quot;Anchor: Text '3' (1170,559,19,30)&quot; +&#xA;&quot;Anchor: Button (1137,449,85,79)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="c7b1a2ca5a99fee792d690c5d7e2362c" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -520,7 +520,7 @@
             </TryCatch>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_3">
               <TryCatch.Try>
-                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1136,626,85,79)&quot; +&#xD;&#xA;&quot;Anchor: Button (1052,626,85,78)&quot; +&#xD;&#xA;&quot;Anchor: Button (1137,536,84,77)&quot; +&#xD;&#xA;&quot;Anchor: Text '3' (1170,559,19,30)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_3" InformativeScreenshot="4180be29c3eef5c7c76e2e2511ac2155" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1136,626,85,79)&quot; +&#xA;&quot;Anchor: Button (1052,626,85,78)&quot; +&#xA;&quot;Anchor: Button (1137,536,84,77)&quot; +&#xA;&quot;Anchor: Text '3' (1170,559,19,30)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_3" InformativeScreenshot="4180be29c3eef5c7c76e2e2511ac2155" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -632,7 +632,7 @@
             </TryCatch>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_8">
               <TryCatch.Try>
-                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1052,449,84,78)&quot; +&#xD;&#xA;&quot;Anchor: Text '5' (1085,471,19,30)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_8" InformativeScreenshot="49b7094ec803f2635ac35ec60e758a98" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1052,449,84,78)&quot; +&#xA;&quot;Anchor: Text '5' (1085,471,19,30)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_8" InformativeScreenshot="49b7094ec803f2635ac35ec60e758a98" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -1039,7 +1039,7 @@
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ee64c374-5960-4943-bdb7-c04b1a862e00" InformativeScreenshot="4c46d5ca4f26ec89c9fe240160f95947" Selector="&lt;html title='Web Rep Console*' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ee64c374-5960-4943-bdb7-c04b1a862e00" InformativeScreenshot="4c46d5ca4f26ec89c9fe240160f95947" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='Web Rep Console*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

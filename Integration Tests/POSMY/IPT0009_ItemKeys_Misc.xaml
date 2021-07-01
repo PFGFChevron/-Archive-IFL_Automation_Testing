@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="IPT0009_ItemKeys_Misc" this:IPT0009_ItemKeys_Misc.DelayShort="3" this:IPT0009_ItemKeys_Misc.DelayLong="10" this:IPT0009_ItemKeys_Misc.TestName="Test" this:IPT0009_ItemKeys_Misc.ModuleName="POSMY" this:IPT0009_ItemKeys_Misc.ExecutionID="Test" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:stt="clr-namespace:System.Threading.Tasks;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uca="clr-namespace:UiPath.Callout.Activity;assembly=UiPath.Callout.Activity" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="IPT0009_ItemKeys_Misc" this:IPT0009_ItemKeys_Misc.DelayShort="3" this:IPT0009_ItemKeys_Misc.DelayLong="10" this:IPT0009_ItemKeys_Misc.TestName="IPT0009_ItemKeys_Misc" this:IPT0009_ItemKeys_Misc.ModuleName="POSMY" this:IPT0009_ItemKeys_Misc.ExecutionID="[&quot;ExecutionID&quot;+DateTime.Now.ToString(&quot;yyyyMMddHHmmss&quot;)]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:stt="clr-namespace:System.Threading.Tasks;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uca="clr-namespace:UiPath.Callout.Activity;assembly=UiPath.Callout.Activity" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="DelayShort" Type="InArgument(x:Int32)" />
     <x:Property Name="DelayLong" Type="InArgument(x:Int32)" />
@@ -98,7 +98,7 @@
         </ActivityFunc>
       </ui:CalloutScope.CalloutForm>
       <ui:CalloutScope.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='IFL Tester Bot*' /&gt;&#xA;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -234,8 +234,9 @@
       <TryCatch.Try>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_CC_ReprintOnReceipt workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Transaction Tests/NAMOS/Cross Country/Receipt/NAMOS_CC_ReprintOnReceipt.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:Int32" x:Key="DelayShort">[DelayShort]</InArgument>
-            <InArgument x:TypeArguments="x:Int32" x:Key="DelayLong">[DelayLong]</InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="DelayShort">
+              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="DelayShort" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </TryCatch.Try>
@@ -251,7 +252,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Catches exception" sap:VirtualizedContainerService.HintSize="408,241" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence DisplayName="Catches exception" sap:VirtualizedContainerService.HintSize="408,243" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
