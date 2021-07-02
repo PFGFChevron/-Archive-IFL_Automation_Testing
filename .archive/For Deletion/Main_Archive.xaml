@@ -162,7 +162,7 @@
               </Assign.Value>
             </Assign>
             <Switch x:TypeArguments="x:String" DisplayName="Switch 'TestName'" Expression="[TestName]" sap:VirtualizedContainerService.HintSize="497,160" sap2010:WorkflowViewState.IdRef="Switch`1_1">
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Indoor_Postpay_Wetstock_Card Imprinter" DisplayName="Invoke Indoor_Postpay_Wetstock_Card Imprinter workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Integration Tests/Baseline/Indoor_Postpay_Wetstock_Card Imprinter.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Indoor_Postpay_Wetstock_Card Imprinter" DisplayName="Invoke Indoor_Postpay_Wetstock_Card Imprinter workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName=".archive/Baseline/Indoor_Postpay_Wetstock_Card Imprinter.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="TestName">[TestName]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="ModuleName">[ModuleName]</InArgument>
@@ -172,7 +172,7 @@
                   <OutArgument x:TypeArguments="x:String" x:Key="ExecutionStatus">[ExecutionStatus]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Indoor_Cash_No Change" DisplayName="Invoke Indoor_Cash_No Change workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Integration Tests/Baseline/Indoor_Cash_No Change.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Indoor_Cash_No Change" DisplayName="Invoke Indoor_Cash_No Change workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName=".archive/Baseline/Indoor_Cash_No Change.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:Int32" x:Key="DelayShort">[DelayShort]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="DelayLong">[DelayLong]</InArgument>
