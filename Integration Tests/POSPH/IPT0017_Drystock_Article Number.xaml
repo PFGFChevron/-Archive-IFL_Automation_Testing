@@ -68,6 +68,13 @@
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="IPT0017_Drystock_Article Number" sap:VirtualizedContainerService.HintSize="480,2913" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="ArticleNumber">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">4892923733549</Literal>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -120,9 +127,14 @@
     </ui:InvokeWorkflowFile>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,314" sap2010:WorkflowViewState.IdRef="TryCatch_4">
       <TryCatch.Try>
-        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_BuyCoolant1L_ArticleNumber workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="Transaction Tests/NAMOS/PH/Item/NAMOS_PH_BuyDrystock_Coolant1L_ArticleNumber.xaml">
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_PH_BuyDrystock_Coolant1L_ArticleNumber workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="Transaction Tests/NAMOS/PH/Item/NAMOS_PH_BuyDrystock_Coolant1L_ArticleNumber.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:Int32" x:Key="DelayShort">[DelayShort]</InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="DelayShort">
+              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="DelayShort" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="ArticleNumber">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ArticleNumber" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </TryCatch.Try>
