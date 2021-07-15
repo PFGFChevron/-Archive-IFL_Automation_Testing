@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1488,2939</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1010,3106</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExecuteTestScripts_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -64,7 +64,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExecuteTestScripts_Local" sap:VirtualizedContainerService.HintSize="604,2834" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExecuteTestScripts_Local" sap:VirtualizedContainerService.HintSize="604,3041" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="Indoor_Cash_No Change" Name="TestName" />
       <Variable x:TypeArguments="x:String" Default="Test" Name="ExecutionID" />
@@ -106,7 +106,7 @@
         <OutArgument x:TypeArguments="x:String">[ModuleName]</OutArgument>
       </ui:GetAttribute.Result>
       <ui:GetAttribute.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="13343460-ed0e-4135-8922-833f80314c19" InformativeScreenshot="55d788b16ed966eea50010f6b614b798" Selector="&lt;html app='msedge.exe' title='IFL Testing Bot' /&gt;&#xD;&#xA;&lt;webctrl tag='H2' parentname='tableExecutionShown' /&gt;&#xD;&#xA;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="13343460-ed0e-4135-8922-833f80314c19" InformativeScreenshot="55d788b16ed966eea50010f6b614b798" Selector="&lt;html app='msedge.exe' title='IFL Testing Bot' /&gt;&#xA;&lt;webctrl tag='H2' parentname='tableExecutionShown' /&gt;&#xA;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -124,13 +124,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Matches>
-    <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,1923" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[CollectionTestName]">
+    <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,2312" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[CollectionTestName]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="str:Match">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="str:Match" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="For Each 'Test Name'" sap:VirtualizedContainerService.HintSize="526,1789" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="For Each 'Test Name'" sap:VirtualizedContainerService.HintSize="526,2178" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -160,7 +160,8 @@
                 <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WORD_CreateTestResultFile workflow" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Utilities\WORD_CreateTestResultFile.xaml">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting execution of &quot;+TestName]" />
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WORD_CreateTestResultFile workflow" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Utilities/UTL_WORD_CreateTestResultFile.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="ModuleName">[ModuleName]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="TestName">[TestName]</InArgument>
@@ -193,7 +194,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_21">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[ExecutionStatus]</OutArgument>
                       </Assign.To>
@@ -205,6 +206,13 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UTL_DELAY_Short workflow" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="Utilities\UTL_DELAY_Short.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="LogMessage">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;********Test &quot;+ExecutionStatus+&quot;: IPT0017_Drystock_Article Number********&quot;" />
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_12">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[ExecutionEnd]</OutArgument>
@@ -244,7 +252,7 @@
                 </ActivityFunc>
               </ui:CalloutScope.CalloutForm>
               <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" InformativeScreenshot="e6f51c2ffac149c6d802820b8cf33cef" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='IFL Tester Bot*' /&gt;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" InformativeScreenshot="e6f51c2ffac149c6d802820b8cf33cef" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -260,7 +268,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CalloutScope>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PDF_ConvertTestResultFIle_Local workflow" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="Utilities\PDF_ConvertTestResultFIle_Local.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PDF_ConvertTestResultFIle_Local workflow" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="Utilities/UTL_PDF_ConvertTestResultFIle_Local.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">[ExecutionID]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="ExecutionEnd">[ExecutionEnd]</InArgument>
@@ -274,7 +282,8 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WEB_UpdateTestUI_Local workflow" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="Utilities\WEB_UpdateTestUI_Local.xaml">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Ended execution of  &quot;+TestName]" />
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WEB_UpdateTestUI_Local workflow" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="Functions of UI/WEB_UpdateTestUI_Local.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="ModuleName">[ModuleName]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="TestName">[TestName]</InArgument>
@@ -321,7 +330,7 @@
                 </ActivityFunc>
               </ui:CalloutScope.CalloutForm>
               <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='IFL Tester Bot*' /&gt;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -337,42 +346,32 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CalloutScope>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'Windows+M'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="m" KeyModifiers="Win">
-              <ui:SendHotkey.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f2f51f7f-41a6-43ed-87ae-73b3c913c9e2">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:SendHotkey.Target>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WEB_BuildTestUI_Local workflow" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Functions of UI/WEB_BuildTestUI_Local.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:InvokeWorkflowFile.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </ui:SendHotkey>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'IFL Tester Bot'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="048e2a8e57106d2b3632eec64bc06168" Selector="&lt;html htmlwindowname='NewWin' title='IFL Tester Bot' /&gt;">
+            </ui:InvokeWorkflowFile>
+            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'Refresh Browser'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="f3315e65075ff64d3b1cb948ee3bb07e" Selector="&lt;html app='msedge.exe' title='IFL Testing Bot' /&gt;">
               <ui:BrowserScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'IMG  file:///C:/temp/.i...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Activate_1">
-                    <ui:Activate.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f641e92-3377-42a5-aee5-fa592300afd7" InformativeScreenshot="7fe191b5f9550346c50e413d53f71f1f" Selector="&lt;webctrl tag='IMG' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:Activate.Target>
-                  </ui:Activate>
+                  <Sequence sap:VirtualizedContainerService.HintSize="242,176" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:RefreshBrowser Browser="{x:Null}" DisplayName="Refresh Browser" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RefreshBrowser_4" />
+                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_4" />
+                  </Sequence>
                 </ActivityAction>
               </ui:BrowserScope.Body>
               <sap:WorkflowViewStateService.ViewState>
@@ -392,42 +391,7 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WEB_BuildTestUI_Local workflow" sap:VirtualizedContainerService.HintSize="562,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Utilities\WEB_BuildTestUI_Local.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
-      </ui:InvokeWorkflowFile.Arguments>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:InvokeWorkflowFile>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'Refresh Browser'" sap:VirtualizedContainerService.HintSize="562,51" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="d57c91a09dedebc70cfa4932482aa074" Selector="&lt;html title='IFL Testing Bot' /&gt;&#xA;">
-      <ui:BrowserScope.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-          </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="242,176" sap2010:WorkflowViewState.IdRef="Sequence_6">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:RefreshBrowser Browser="{x:Null}" DisplayName="Refresh Browser" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RefreshBrowser_4" />
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_4" />
-          </Sequence>
-        </ActivityAction>
-      </ui:BrowserScope.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:BrowserScope>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'Close IFL Tester Bot'" sap:VirtualizedContainerService.HintSize="562,51" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="cc194ca41a8ccad2e30dccdff966d7f6" Selector="&lt;html htmlwindowname='NewWin' title='IFL Tester Bot*' /&gt;&#xA;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'Close IFL Tester Bot'" sap:VirtualizedContainerService.HintSize="562,51" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="8687b3ce827f3af4eb64c90d94aab01a" Selector="&lt;html app='msedge.exe' title='IFL Tester Bot*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

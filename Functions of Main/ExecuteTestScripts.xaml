@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Activity mc:Ignorable="sap sap2010" x:Class="ExecuteTestScripts" this:ExecuteTestScripts.DelayShort="3" this:ExecuteTestScripts.DelayLong="10" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:stt="clr-namespace:System.Threading.Tasks;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uca="clr-namespace:UiPath.Callout.Activity;assembly=UiPath.Callout.Activity" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="DelayShort" Type="InArgument(x:Int32)" />
@@ -160,7 +161,7 @@
                 <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WORD_CreateTestResultFile workflow" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Utilities\WORD_CreateTestResultFile.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WORD_CreateTestResultFile workflow" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Utilities/UTL_WORD_CreateTestResultFile.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="ModuleName">[ModuleName]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="TestName">[TestName]</InArgument>
@@ -260,7 +261,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CalloutScope>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PDF_ConvertTestResultFIle workflow" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="Utilities\PDF_ConvertTestResultFIle.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PDF_ConvertTestResultFIle workflow" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="Utilities/UTL_PDF_ConvertTestResultFIle.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">
                   <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExecutionID" />
@@ -282,7 +283,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WEB_UpdateTestUI workflow" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Utilities\WEB_UpdateTestUI.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WEB_UpdateTestUI workflow" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Functions of UI/WEB_UpdateTestUI.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="ModuleName">
                   <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ModuleName" />
@@ -412,7 +413,7 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WEB_BuildTestUI workflow" sap:VirtualizedContainerService.HintSize="562,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="Utilities\WEB_BuildTestUI.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke WEB_BuildTestUI workflow" sap:VirtualizedContainerService.HintSize="562,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="Functions of UI/WEB_BuildTestUI.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>

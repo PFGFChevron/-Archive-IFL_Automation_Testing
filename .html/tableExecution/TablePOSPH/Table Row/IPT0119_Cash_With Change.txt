@@ -48,11 +48,11 @@ Step 10	Click [Repeat Yes] button
             </div>
           </div>
 
-          <td class="executionStatus" style="color:gray"><b>Not Started</b></td>
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
 
-          <td class="executionStart">N/A</td>
+          <td class="executionStart">07-15-2021 01:43:43</td>
 
-          <td class="executionEnd">N/A</td>
+          <td class="executionEnd">07-15-2021 01:48:08</td>
 
-          <td class="Screenshots"><a id="logFile_IPT0119_Cash_With Change" href="#" onclick='showModalLogFile("IPT0119_Cash_With Change");'>Execution ID: N/A</a></td>
+          <td class="Screenshots"><a id="logFile_IPT0119_Cash_With Change" href="#" onclick='showModalLogFile("IPT0119_Cash_With Change");'>Execution ID: 20210715014343</a></td>
         </tr>

@@ -1,12 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="NAMOS_PH_GetTotalAmount" this:NAMOS_PH_GetTotalAmount.DelayShort="3" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:stt="clr-namespace:System.Threading.Tasks;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:uca="clr-namespace:UiPath.Callout.Activity;assembly=UiPath.Callout.Activity" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="NAMOS_PH_GetTotalAmount" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="DelayShort" Type="InArgument(x:Int32)" />
     <x:Property Name="TotalAmount" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,1438</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1010,1336</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NAMOS_BuyCoolant1L_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -65,54 +64,24 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NAMOS_PH_GetTotalAmount" sap:VirtualizedContainerService.HintSize="514,1373" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="NAMOS_PH_GetTotalAmount" sap:VirtualizedContainerService.HintSize="514,1271" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" DisplayName="Computer Vision" sap:VirtualizedContainerService.HintSize="472,1281" sap2010:WorkflowViewState.IdRef="CVScope_6" Version="V1">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" DisplayName="Computer Vision" sap:VirtualizedContainerService.HintSize="472,1179" sap2010:WorkflowViewState.IdRef="CVScope_6" Version="V1">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_8">
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_33">
-              <ui:CalloutScope.CalloutForm>
-                <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
-                  <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Getting Total Amount&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_33" TimeoutInSeconds="[DelayShort]" Width="450">
-                    <uca:CallOutActivity.CalloutFieldsCollection>
-                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                    </uca:CallOutActivity.CalloutFieldsCollection>
-                    <uca:CallOutActivity.TargetElementPosition>
-                      <InArgument x:TypeArguments="sd:Rectangle">
-                        <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_65">
-                          <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID0" Name="TargetElementPosition" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetElementPosition>
-                    <uca:CallOutActivity.TargetWindowHandle>
-                      <InArgument x:TypeArguments="s:IntPtr">
-                        <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_66">
-                          <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID1" Name="TargetWindowHandle" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetWindowHandle>
-                  </uca:CallOutActivity>
-                </ActivityFunc>
-              </ui:CalloutScope.CalloutForm>
-              <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:CalloutScope.Target>
-            </ui:CalloutScope>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UTL_DELAY_Short workflow" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Utilities\UTL_DELAY_Short.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="LogMessage">Getting Total Amount</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_35" InformativeScreenshot="42926ca00985d055cfca6ab93ab92246" Version="V1">
               <p:CVRefresh.DesignTimeCache>
                 <uc:CVCache InformativeScreenshot="69131337f589185f22c45218b1ddf822" LogicalPosition="0, 103" OcrText="Web Rep Console&#xA;Web Rep Console - Patricio Ca X +&#xA;https:!ichevron.beyondtrustcloud.com/console#&#xA;Orchestrator - CVX Orchesträtor - ACN OrchestiG —ion Proce... UiPath Academy Docume.&quot;.-. Web rhell popup... v.rscr.ot., W Home - SNo&amp;day Cool Kids - Illusträti... UiPath Academy UiPath V.arketplace&#xA;Q Current Session: PH000000020P1 1 sesslon&#xA;SCREEN SHARING Total&#xA;Quantity NO. 2 1210.00&#xA;NO. 3&#xA;Amount Emergency&#xA;Day More&#xA;Functions&#xA;Reprint&#xA;Receipt&#xA;Query&#xA;Override Technician 07/08/21&#xA;Quantity&#xA;Item&#xA;Void Item&#xA;Repe at UiPath Community... GitHub&#xA;Desktop Console&#xA;Everyone&#xA;Patricio can now view&#xA;and control fre customer's screen.&#xA;6:41 :08) [Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;[Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;[Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;choose payment type&#xA;1210.00 Save/&#xA;Recall&#xA;Layaway,&#xA;Item&#xA;discount&#xA;select. More&#xA;Mops&#xA;7&#xA;4&#xA;1&#xA;Local&#xA;Account Item Keys&#xA;8&#xA;5&#xA;2&#xA;Space Num&#xA;9&#xA;6&#xA;3&#xA;sack-&#xA;space&#xA;Credit /&#xA;Bank Card Cash&#xA;Control" Position="0, 103" ScreenshotGuid="a56b7542-fc25-4727-8b9e-68a4ce2d6850" ServerVersion="1">

@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,2536</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,2437</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NAMOS_BuyCoolant1L_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -66,13 +66,13 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NAMOS_CC_GetTicketNumberAndDate" sap:VirtualizedContainerService.HintSize="514,2471" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="NAMOS_CC_GetTicketNumberAndDate" sap:VirtualizedContainerService.HintSize="514,2372" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" DisplayName="Computer Vision" sap:VirtualizedContainerService.HintSize="472,2379" sap2010:WorkflowViewState.IdRef="CVScope_6" Version="V1">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" DisplayName="Computer Vision" sap:VirtualizedContainerService.HintSize="472,2280" sap2010:WorkflowViewState.IdRef="CVScope_6" Version="V1">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -593,7 +593,7 @@
             </p:CVRefresh>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,363" sap2010:WorkflowViewState.IdRef="TryCatch_13">
               <TryCatch.Try>
-                <p:CvGetTextWithDescriptor Descriptor="[&quot;Target: AnyText (447,584,47,11)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Num' (447,565,28,10)&quot; +&#xD;&#xA;&quot;Anchor: Text 'pos' (508,565,26,10)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Time' (387,563,38,12)&quot; +&#xD;&#xA;&quot;Anchor: Text '01' (508,584,17,11)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="2633ca212095b337ee89da913a8b890b" RefreshBefore="True" Result="[TicketNumber]" Version="V1">
+                <p:CvGetTextWithDescriptor Descriptor="[&quot;Target: AnyText (447,584,47,11)&quot; +&#xA;&quot;Anchor: Text 'Num' (447,565,28,10)&quot; +&#xA;&quot;Anchor: Text 'pos' (508,565,26,10)&quot; +&#xA;&quot;Anchor: Text 'Time' (387,563,38,12)&quot; +&#xA;&quot;Anchor: Text '01' (508,584,17,11)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="2633ca212095b337ee89da913a8b890b" RefreshBefore="True" Result="[TicketNumber]" Version="V1">
                   <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                     <uc:CvDescriptor InformativeScreenshot="2633ca212095b337ee89da913a8b890b">
                       <uc:CvDescriptor.Anchors>
@@ -697,7 +697,6 @@
                 <InArgument x:TypeArguments="x:String">[TicketDate.Substring(0,8)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="438,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[TicketNumber]" />
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
