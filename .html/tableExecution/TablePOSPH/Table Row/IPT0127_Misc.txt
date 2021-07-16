@@ -48,11 +48,11 @@ Step 10	Verify receipt
             </div>
           </div>
 
-          <td class="executionStatus" style="color:gray"><b>Not Started</b></td>
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
 
-          <td class="executionStart">N/A</td>
+          <td class="executionStart">07-16-2021 03:01:31</td>
 
-          <td class="executionEnd">N/A</td>
+          <td class="executionEnd">07-16-2021 03:05:29</td>
 
-          <td class="Screenshots"><a id="logFile_IPT0127_Misc" href="#" onclick='showModalLogFile("IPT0127_Misc");'>Execution ID: N/A</a></td>
+          <td class="Screenshots"><a id="logFile_IPT0127_Misc" href="#" onclick='showModalLogFile("IPT0127_Misc");'>Execution ID: 20210716030131</a></td>
         </tr>

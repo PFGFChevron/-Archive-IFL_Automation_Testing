@@ -50,11 +50,11 @@ If applicable, enter <<<Odometer>>>."
             </div>
           </div>
 
-          <td class="executionStatus" style="color:gray"><b>Not Started</b></td>
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
 
-          <td class="executionStart">N/A</td>
+          <td class="executionStart">07-16-2021 02:28:17</td>
 
-          <td class="executionEnd">N/A</td>
+          <td class="executionEnd">07-16-2021 02:33:31</td>
 
-          <td class="Screenshots"><a id="logFile_IPT0123_MOPs_Local Account - Account name" href="#" onclick='showModalLogFile("IPT0123_MOPs_Local Account - Account name");'>Execution ID: N/A</a></td>
+          <td class="Screenshots"><a id="logFile_IPT0123_MOPs_Local Account - Account name" href="#" onclick='showModalLogFile("IPT0123_MOPs_Local Account - Account name");'>Execution ID: 20210716022817</a></td>
         </tr>

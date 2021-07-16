@@ -50,9 +50,9 @@ Step 11	Select <<<Coupon>>>
 
           <td class="executionStatus" style="color:green"><b>Passed</b></td>
 
-          <td class="executionStart">07-15-2021 01:48:23</td>
+          <td class="executionStart">07-16-2021 02:05:08</td>
 
-          <td class="executionEnd">07-15-2021 01:51:56</td>
+          <td class="executionEnd">07-16-2021 02:09:22</td>
 
-          <td class="Screenshots"><a id="logFile_IPT0120_Postpay_Wetstock_Coupon" href="#" onclick='showModalLogFile("IPT0120_Postpay_Wetstock_Coupon");'>Execution ID: 20210715014823</a></td>
+          <td class="Screenshots"><a id="logFile_IPT0120_Postpay_Wetstock_Coupon" href="#" onclick='showModalLogFile("IPT0120_Postpay_Wetstock_Coupon");'>Execution ID: 20210716020508</a></td>
         </tr>

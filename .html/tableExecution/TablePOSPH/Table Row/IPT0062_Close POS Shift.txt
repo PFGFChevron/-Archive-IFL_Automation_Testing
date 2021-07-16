@@ -44,9 +44,9 @@ Step 4	Enter <<<Password>>> using numpad. Then click [Yes]
 
           <td class="executionStatus" style="color:green"><b>Passed</b></td>
 
-          <td class="executionStart">07-15-2021 01:04:19</td>
+          <td class="executionStart">07-16-2021 01:15:28</td>
 
-          <td class="executionEnd">07-15-2021 01:07:25</td>
+          <td class="executionEnd">07-16-2021 01:19:32</td>
 
-          <td class="Screenshots"><a id="logFile_IPT0062_Close POS Shift" href="#" onclick='showModalLogFile("IPT0062_Close POS Shift");'>Execution ID: 20210715010419</a></td>
+          <td class="Screenshots"><a id="logFile_IPT0062_Close POS Shift" href="#" onclick='showModalLogFile("IPT0062_Close POS Shift");'>Execution ID: 20210716011528</a></td>
         </tr>

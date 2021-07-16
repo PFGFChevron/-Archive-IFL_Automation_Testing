@@ -43,11 +43,11 @@ Step 5	Check receipt.
             </div>
           </div>
 
-          <td class="executionStatus" style="color:red"><b>Failed</b></td>
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
 
-          <td class="executionStart">07-15-2021 14:46:30</td>
+          <td class="executionStart">07-16-2021 00:41:52</td>
 
-          <td class="executionEnd">07-15-2021 14:46:36</td>
+          <td class="executionEnd">07-16-2021 00:45:58</td>
 
-          <td class="Screenshots"><a id="logFile_IPT0018_Drystock_Item Keys" href="#" onclick='showModalLogFile("IPT0018_Drystock_Item Keys");'>Execution ID: 20210715144630</a></td>
+          <td class="Screenshots"><a id="logFile_IPT0018_Drystock_Item Keys" href="#" onclick='showModalLogFile("IPT0018_Drystock_Item Keys");'>Execution ID: 20210716004152</a></td>
         </tr>

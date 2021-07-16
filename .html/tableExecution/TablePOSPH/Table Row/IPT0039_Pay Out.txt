@@ -42,11 +42,11 @@ Step 4	Enter <<<Payment>>> using POS numpad then Click [Cash] button.
             </div>
           </div>
 
-          <td class="executionStatus" style="color:red"><b>Failed</b></td>
+          <td class="executionStatus" style="color:green"><b>Passed</b></td>
 
-          <td class="executionStart">07-14-2021 20:51:38</td>
+          <td class="executionStart">07-16-2021 00:52:38</td>
 
-          <td class="executionEnd">07-14-2021 20:55:08</td>
+          <td class="executionEnd">07-16-2021 00:55:53</td>
 
-          <td class="Screenshots"><a id="logFile_IPT0039_Pay Out" href="#" onclick='showModalLogFile("IPT0039_Pay Out");'>Execution ID: 20210714205138</a></td>
+          <td class="Screenshots"><a id="logFile_IPT0039_Pay Out" href="#" onclick='showModalLogFile("IPT0039_Pay Out");'>Execution ID: 20210716005238</a></td>
         </tr>
