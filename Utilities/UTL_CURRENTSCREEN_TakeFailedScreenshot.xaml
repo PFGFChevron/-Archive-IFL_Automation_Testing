@@ -3,11 +3,12 @@
     <x:Property Name="TestName" Type="InArgument(x:String)" />
     <x:Property Name="ModuleName" Type="InArgument(x:String)" />
     <x:Property Name="ExecutionID" Type="InArgument(x:String)" />
+    <x:Property Name="Reason" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1010,1591</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1006,1888</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TakeScreenshot_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -62,7 +63,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CURRENTSCREEN_TakeFailedScreenshot" sap:VirtualizedContainerService.HintSize="552,1526" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CURRENTSCREEN_TakeFailedScreenshot" sap:VirtualizedContainerService.HintSize="552,1823" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Image" Name="Screenshot" />
       <Variable x:TypeArguments="x:String" Name="Directory" />
@@ -127,6 +128,27 @@
         <InArgument x:TypeArguments="x:String">[Directory+"\Test Log_"+TestName+"_"+ExecutionID+".docx"]</InArgument>
       </Assign.Value>
     </Assign>
+    <ui:Replace sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_1" Input="[Reason]" IsBuilderTabModified="False" Pattern="System.Activities.Statements.WorkflowTerminatedException: " RegexOption="IgnoreCase, Compiled" Result="[Reason]">
+      <ui:Replace.Replacement>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:Replace.Replacement>
+    </ui:Replace>
+    <ui:Replace sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_2" Input="[Reason]" IsBuilderTabModified="False" Pattern="(...at System\.)([^]]+)" RegexOption="IgnoreCase, Compiled" Result="[Reason]">
+      <ui:Replace.Replacement>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:Replace.Replacement>
+    </ui:Replace>
+    <ui:Replace sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_3" Input="[Reason]" IsBuilderTabModified="False" Pattern="(UiPath.CV.ElementNotFoundException: Element not found)([^]]+)" RegexOption="IgnoreCase, Compiled" Result="[Reason]">
+      <ui:Replace.Replacement>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:Replace.Replacement>
+    </ui:Replace>
     <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[TestLogPath]" sap:VirtualizedContainerService.HintSize="510,429" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
       <p:WordApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WordDocument">
@@ -139,7 +161,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:WordAppendText DisplayName="Append Text" sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="WordAppendText_1" Text="Test execution FAILED. Refer to execution screen below:" />
+            <p:WordAppendText DisplayName="Append Text" sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="WordAppendText_1" Text="[&quot;Test Execution FAILED: &quot;+Reason]" />
             <p:WordAddImage DisplayName="Add Picture" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="WordAddImage_1" ImagePath="[ScreenshotPath]" />
           </Sequence>
         </ActivityAction>

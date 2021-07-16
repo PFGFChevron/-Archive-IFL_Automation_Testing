@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1006,5542</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>989,5542</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Indoor_Cash_No_Change_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -84,9 +84,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UTL_DELAY_Short workflow" sap:VirtualizedContainerService.HintSize="461,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_58" UnSafe="False" WorkflowFileName="Utilities\UTL_DELAY_Short.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="LogMessage">
-          <Literal x:TypeArguments="x:String">********Test Started: IPT0061_Void Transaction (Cash Account)********</Literal>
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="LogMessage">********Test Started: IPT0061_Void Transaction (Cash Account)********</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="True" DisplayName="Invoke NAMOS_CC_CashierSignOn workflow" sap:VirtualizedContainerService.HintSize="461,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_54" UnSafe="False" WorkflowFileName="Transaction Tests/NAMOS/Cross Country/More Functions/NAMOS_CC_CashierSignOn.xaml">
@@ -98,9 +96,7 @@
       <TryCatch.Try>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_PH_BuyDrystock_DeloMulti5L workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_55" UnSafe="False" WorkflowFileName="Transaction Tests/NAMOS/PH/Item Keys/NAMOS_PH_BuyDrystock_DeloMulti5L.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <OutArgument x:TypeArguments="x:String" x:Key="Drystock">
-              <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Drystock" />
-            </OutArgument>
+            <OutArgument x:TypeArguments="x:String" x:Key="Drystock">[Drystock]</OutArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </TryCatch.Try>
@@ -132,6 +128,9 @@
                   </InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">
                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExecutionID" />
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Reason">
+                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="exception.ToString" />
                   </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
@@ -188,6 +187,9 @@
                   <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">
                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExecutionID" />
                   </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Reason">
+                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="exception.ToString" />
+                  </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <TerminateWorkflow DisplayName="Terminate Workflow" Exception="[exception]" sap:VirtualizedContainerService.HintSize="379,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_12" />
@@ -198,15 +200,9 @@
     </TryCatch>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_TakeScreenshot workflow" sap:VirtualizedContainerService.HintSize="461,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="Utilities/UTL_NAMOS_TakeScreenshot.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="TestName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestName" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ModuleName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ModuleName" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExecutionID" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="TestName">[TestName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ModuleName">[ModuleName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">[ExecutionID]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="461,734" sap2010:WorkflowViewState.IdRef="TryCatch_10">
@@ -246,6 +242,9 @@
                   <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">
                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExecutionID" />
                   </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Reason">
+                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="exception.ToString" />
+                  </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <TerminateWorkflow DisplayName="Terminate Workflow" Exception="[exception]" sap:VirtualizedContainerService.HintSize="379,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_11" />
@@ -266,15 +265,9 @@
     </TryCatch>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_TakeScreenshot workflow" sap:VirtualizedContainerService.HintSize="461,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="Utilities/UTL_NAMOS_TakeScreenshot.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="TestName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestName" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ModuleName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ModuleName" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExecutionID" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="TestName">[TestName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ModuleName">[ModuleName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">[ExecutionID]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="461,734" sap2010:WorkflowViewState.IdRef="TryCatch_6">
@@ -314,6 +307,9 @@
                   <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">
                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExecutionID" />
                   </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Reason">
+                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="exception.ToString" />
+                  </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <TerminateWorkflow DisplayName="Terminate Workflow" Exception="[exception]" sap:VirtualizedContainerService.HintSize="379,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_8" />
@@ -334,15 +330,9 @@
     </TryCatch>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_TakeScreenshot workflow" sap:VirtualizedContainerService.HintSize="461,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Utilities/UTL_NAMOS_TakeScreenshot.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="TestName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestName" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ModuleName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ModuleName" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExecutionID" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="TestName">[TestName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ModuleName">[ModuleName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">[ExecutionID]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="461,707" sap2010:WorkflowViewState.IdRef="TryCatch_7">
@@ -382,6 +372,9 @@
                   <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">
                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExecutionID" />
                   </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Reason">
+                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="exception.ToString" />
+                  </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <TerminateWorkflow DisplayName="Terminate Workflow" Exception="[exception]" sap:VirtualizedContainerService.HintSize="379,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_9" />
@@ -392,15 +385,9 @@
     </TryCatch>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_TakeScreenshot workflow" sap:VirtualizedContainerService.HintSize="461,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_35" UnSafe="False" WorkflowFileName="Utilities/UTL_NAMOS_TakeScreenshot.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="TestName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestName" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ModuleName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ModuleName" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExecutionID" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="TestName">[TestName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ModuleName">[ModuleName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">[ExecutionID]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="461,707" sap2010:WorkflowViewState.IdRef="TryCatch_9">
@@ -439,6 +426,9 @@
                   </InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="ExecutionID">
                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ExecutionID" />
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Reason">
+                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="exception.ToString" />
                   </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
