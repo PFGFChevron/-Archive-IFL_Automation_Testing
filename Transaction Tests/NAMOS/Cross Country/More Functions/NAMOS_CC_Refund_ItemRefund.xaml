@@ -1,14 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Activity mc:Ignorable="sap sap2010" x:Class="NAMOS_CC_Refund_ItemRefund" this:NAMOS_CC_Refund_ItemRefund.DelayShort="3" this:NAMOS_CC_Refund_ItemRefund.TicketNumber="00120" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:stt="clr-namespace:System.Threading.Tasks;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:uca="clr-namespace:UiPath.Callout.Activity;assembly=UiPath.Callout.Activity" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="NAMOS_CC_Refund_ItemRefund" this:NAMOS_CC_Refund_ItemRefund.TicketNumber="00120" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="DelayShort" Type="InArgument(x:Int32)" />
     <x:Property Name="TicketNumber" Type="InArgument(x:String)" />
     <x:Property Name="TicketDate" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1488,8176</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>972,7258</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NAMOS_BuyCoolant1L_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -67,54 +65,26 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NAMOS_CC_Refund_ItemRefund" sap:VirtualizedContainerService.HintSize="514,8111" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="NAMOS_CC_Refund_ItemRefund" sap:VirtualizedContainerService.HintSize="514,7193" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" DisplayName="Computer Vision" sap:VirtualizedContainerService.HintSize="472,8019" sap2010:WorkflowViewState.IdRef="CVScope_6" Version="V1">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" DisplayName="Computer Vision" sap:VirtualizedContainerService.HintSize="472,7101" sap2010:WorkflowViewState.IdRef="CVScope_6" Version="V1">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_8">
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_33">
-              <ui:CalloutScope.CalloutForm>
-                <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
-                  <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Clicking More Functions&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_33" TimeoutInSeconds="[DelayShort]" Width="450">
-                    <uca:CallOutActivity.CalloutFieldsCollection>
-                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                    </uca:CallOutActivity.CalloutFieldsCollection>
-                    <uca:CallOutActivity.TargetElementPosition>
-                      <InArgument x:TypeArguments="sd:Rectangle">
-                        <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_65">
-                          <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID0" Name="TargetElementPosition" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetElementPosition>
-                    <uca:CallOutActivity.TargetWindowHandle>
-                      <InArgument x:TypeArguments="s:IntPtr">
-                        <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_66">
-                          <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID1" Name="TargetWindowHandle" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetWindowHandle>
-                  </uca:CallOutActivity>
-                </ActivityFunc>
-              </ui:CalloutScope.CalloutForm>
-              <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:CalloutScope.Target>
-            </ui:CalloutScope>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UTL_DELAY_Short workflow" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Utilities\UTL_DELAY_Short.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="LogMessage">
+                  <Literal x:TypeArguments="x:String">Clicking More Functions</Literal>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_35" InformativeScreenshot="269f1e4db2e1fb3652446f9a0252e3ff" Version="V1">
               <p:CVRefresh.DesignTimeCache>
                 <uc:CVCache InformativeScreenshot="3afa39c3df04db4066983670a4617dcc" LogicalPosition="0, 0" OcrText="Web Rep Console&#xA;I'Veb Rep Console - Patricio Ca X +&#xA;https:!ichevron.beyondtrustcloud.com/console#&#xA;Orchestrator - CVX Orchestrator - ACN Orchestration Proce... UiPath Academy&#xA;122.00&#xA;NO. 3&#xA;Amount Home - SNo&amp;day&#xA;120.00&#xA;122.00 Docume.&quot;.-. Web uscript.shell popup... W Cool Kids - Illusträti... UiPath Academy UiPath V.arketplace&#xA;Current Session: MY000000015P1-MY 1 session&#xA;SCREEN SHARING Total NO. 2&#xA;SmartTag&#xA;METRO .U.HAD&#xA;02 e Emergency&#xA;More&#xA;Functions&#xA;Reprin&#xA;Receipt&#xA;Query&#xA;Override&#xA;Receipt Technician&#xA;Quantity&#xA;1&#xA;1&#xA;Cash More&#xA;Mops&#xA;7&#xA;4&#xA;1 24/06/21&#xA;Quantity&#xA;Void Item&#xA;Yes&#xA;Repeat&#xA;NO&#xA;Total UiPath Community... GitHub&#xA;Desktop Console&#xA;Everyone&#xA;(21:47:02) Patricio can now view&#xA;and control fre customer's screen.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(21:57:24) [Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;(22:06:31) [Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(22:06:32) [Paffjcio Thankyou.&#xA;You will remain in the session. Recall&#xA;Layaway&#xA;discount&#xA;Assign&#xA;Loyalty&#xA;Card Item Keys&#xA;8&#xA;5&#xA;2&#xA;Space Num&#xA;9&#xA;6&#xA;3&#xA;Back-&#xA;space&#xA;Control Credit /&#xA;Bank Card" Position="0, 0" ScreenshotGuid="63123ab8-1729-4f98-b1f9-2095e6d28160" ServerVersion="1">
@@ -691,41 +661,13 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_40">
-              <ui:CalloutScope.CalloutForm>
-                <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID2}" Argument2="{x:Reference __ReferenceID3}">
-                  <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Clicking Refund&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_40" TimeoutInSeconds="[DelayShort]" Width="450">
-                    <uca:CallOutActivity.CalloutFieldsCollection>
-                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                    </uca:CallOutActivity.CalloutFieldsCollection>
-                    <uca:CallOutActivity.TargetElementPosition>
-                      <InArgument x:TypeArguments="sd:Rectangle">
-                        <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_79">
-                          <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID2" Name="TargetElementPosition" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetElementPosition>
-                    <uca:CallOutActivity.TargetWindowHandle>
-                      <InArgument x:TypeArguments="s:IntPtr">
-                        <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_80">
-                          <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID3" Name="TargetWindowHandle" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetWindowHandle>
-                  </uca:CallOutActivity>
-                </ActivityFunc>
-              </ui:CalloutScope.CalloutForm>
-              <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:CalloutScope.Target>
-            </ui:CalloutScope>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UTL_DELAY_Short workflow" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Utilities\UTL_DELAY_Short.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="LogMessage">
+                  <Literal x:TypeArguments="x:String">Clicking Refund</Literal>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_39" InformativeScreenshot="5b14440e74a67aa945241e90a45282e0" Version="V1">
               <p:CVRefresh.DesignTimeCache>
                 <uc:CVCache InformativeScreenshot="5c47d08e0087334a7250a62bc271814f" LogicalPosition="0, 103" OcrText="Web Rep Console&#xA;I'Veb Rep Console - Patricio Ca X +&#xA;https:!ichevron.beyondtrustcloud.com/console#&#xA;Orchestrator - CVX Orchestrator - ACN OrchestiG —ion Proce... UiPath Academy&#xA;122.00&#xA;NO. 3&#xA;Amount Home - SNo&amp;day&#xA;120.00&#xA;122.00 Document - Web uscript.shell popup... W Cool Kids - Illusträti... UiPath Academy UiPath V.arketplace&#xA;Current Session: MY000000015P1-MY 1 session&#xA;SCREEN SHARING Total NO. 2&#xA;SmartTag&#xA;METRO .U.HAD&#xA;02 e Emergency&#xA;More&#xA;Functions&#xA;Cashier&#xA;Signon&#xA;Receipt&#xA;omott&#xA;rransactior&#xA;sale code Technician&#xA;Quantity&#xA;1&#xA;1&#xA;Cash 24/06/21&#xA;Quantity&#xA;Void Item&#xA;Yes&#xA;Repeat&#xA;NO&#xA;Total UiPath Community... GitHub&#xA;Desktop Console&#xA;Everyone&#xA;(21:47:02) Patricio can now view&#xA;and control fre customer's screen.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(21:57:24) [Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;(22:06:31) [Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(22:06:32) [Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;Journal&#xA;Refund&#xA;Customer&#xA;Devices More&#xA;Mops&#xA;Signoff&#xA;Shittoay&#xA;end?&#xA;Return&#xA;Journal&#xA;Lang• Item Keys&#xA;Overview&#xA;NO sale&#xA;Central&#xA;Ticket Num&#xA;Signoff&#xA;Pumptest&#xA;Functions&#xA;Carwash&#xA;Close pos&#xA;Traces&#xA;Control Credit /&#xA;Bank Card" Position="0, 103" ScreenshotGuid="4abda697-ab1a-4910-aca3-bfad9aaaef5a" ServerVersion="1">
@@ -1279,41 +1221,13 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_41">
-              <ui:CalloutScope.CalloutForm>
-                <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID4}" Argument2="{x:Reference __ReferenceID5}">
-                  <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Clicking Item Refund&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_41" TimeoutInSeconds="[DelayShort]" Width="450">
-                    <uca:CallOutActivity.CalloutFieldsCollection>
-                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                    </uca:CallOutActivity.CalloutFieldsCollection>
-                    <uca:CallOutActivity.TargetElementPosition>
-                      <InArgument x:TypeArguments="sd:Rectangle">
-                        <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_81">
-                          <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID4" Name="TargetElementPosition" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetElementPosition>
-                    <uca:CallOutActivity.TargetWindowHandle>
-                      <InArgument x:TypeArguments="s:IntPtr">
-                        <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_82">
-                          <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID5" Name="TargetWindowHandle" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetWindowHandle>
-                  </uca:CallOutActivity>
-                </ActivityFunc>
-              </ui:CalloutScope.CalloutForm>
-              <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:CalloutScope.Target>
-            </ui:CalloutScope>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UTL_DELAY_Short workflow" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Utilities\UTL_DELAY_Short.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="LogMessage">
+                  <Literal x:TypeArguments="x:String">Clicking Item Refund</Literal>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_40" InformativeScreenshot="db5c9ed3b0b3dc73fbcebabbe0be08cc" Version="V1">
               <p:CVRefresh.DesignTimeCache>
                 <uc:CVCache InformativeScreenshot="2f11ded2cc624b6f259c84a8e397b6de" LogicalPosition="0, 103" OcrText="Web Rep Console&#xA;I'Veb Rep Console - Patricio Ca X +&#xA;https:!ichevron.beyondtrustcloud.com/console#&#xA;Orchestrator - CVX Orchestrator - ACN Orchestration Proce... UiPath Academy&#xA;122.00 Docume.&quot;.-. Web uscript.shell popup... W Home - SNo&amp;day Cool Kids - Illusträti... UiPath Academy UiPath V.arketplace&#xA;Current Session: MY000000015P1-MY 1 session&#xA;SCREEN SHARING Total&#xA;Refund&#xA;Item Refund&#xA;Cancel Ticket&#xA;02 e Emergency&#xA;More&#xA;Functions&#xA;Reprint&#xA;Receipt&#xA;Query&#xA;Override&#xA;Receipt Technician&#xA;More&#xA;Mops&#xA;7&#xA;4&#xA;1 24/06/21&#xA;Quantity&#xA;Void Item&#xA;Yes&#xA;Repeat&#xA;NO&#xA;Total UiPath Community... GitHub&#xA;Desktop Console&#xA;Everyone&#xA;(21:47:02) Patricio can now view&#xA;and control fre customer's screen.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(21:57:24) [Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;(22:06:31) [Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(22:06:32) [Paffjcio Thankyou.&#xA;You will remain in the session. Recall&#xA;Layaway&#xA;discount&#xA;Assign&#xA;Loyalty&#xA;Card Item Keys&#xA;8&#xA;5&#xA;2&#xA;Space Num&#xA;9&#xA;6&#xA;3&#xA;Back-&#xA;space&#xA;Pump&#xA;Control Credit /&#xA;Bank Card" Position="0, 103" ScreenshotGuid="d5c099ba-1c2a-40d2-83ac-8ed61f66f3ed" ServerVersion="1">
@@ -1823,41 +1737,13 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_39">
-              <ui:CalloutScope.CalloutForm>
-                <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID6}" Argument2="{x:Reference __ReferenceID7}">
-                  <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Entering POS Number 1&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_39" TimeoutInSeconds="[DelayShort]" Width="450">
-                    <uca:CallOutActivity.CalloutFieldsCollection>
-                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                    </uca:CallOutActivity.CalloutFieldsCollection>
-                    <uca:CallOutActivity.TargetElementPosition>
-                      <InArgument x:TypeArguments="sd:Rectangle">
-                        <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_77">
-                          <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID6" Name="TargetElementPosition" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetElementPosition>
-                    <uca:CallOutActivity.TargetWindowHandle>
-                      <InArgument x:TypeArguments="s:IntPtr">
-                        <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_78">
-                          <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID7" Name="TargetWindowHandle" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetWindowHandle>
-                  </uca:CallOutActivity>
-                </ActivityFunc>
-              </ui:CalloutScope.CalloutForm>
-              <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:CalloutScope.Target>
-            </ui:CalloutScope>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UTL_DELAY_Short workflow" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Utilities\UTL_DELAY_Short.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="LogMessage">
+                  <Literal x:TypeArguments="x:String">Entering POS Number 1</Literal>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_38" InformativeScreenshot="27c60c82c3d2b88559edcfe853e66ca6" Version="V1">
               <p:CVRefresh.DesignTimeCache>
                 <uc:CVCache InformativeScreenshot="18fe821f4a966564cf2ebb104d74fdba" LogicalPosition="0, 103" OcrText="Q Current Session: MYOOOOOOOI -MY 1 session cp&#xA;SCREEN SHARING 120.00&#xA;122.00 Total&#xA;Quantity&#xA;1&#xA;1&#xA;Cash NO. 2&#xA;SmartTag&#xA;METRO .U.HAD 122.00&#xA;NO. 3&#xA;Amount Emergency&#xA;More&#xA;Functions&#xA;Reprint&#xA;Receipt&#xA;Query&#xA;Override&#xA;Receipt Technician&#xA;More&#xA;Mops&#xA;7&#xA;4&#xA;1 Desktop Console&#xA;Everyone&#xA;(21:47:02) Patricio can now view&#xA;and control fre customer's screen.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(21:57:24) [Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;(22:06:31) [Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(22:06:32) [Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;Item refund&#xA;POS Number :&#xA;02 e Recall&#xA;Layaway&#xA;discount&#xA;Assign&#xA;Loyalty&#xA;Card Item Keys&#xA;8&#xA;5&#xA;2&#xA;Space Num&#xA;9&#xA;6&#xA;3&#xA;Back-&#xA;space Quantity&#xA;Void Item&#xA;Yes&#xA;Repeat&#xA;NO&#xA;Total&#xA;Pump&#xA;Control Credit /&#xA;Bank Card" Position="0, 103" ScreenshotGuid="e86c3b80-310c-4bdb-8cf4-d2eb0e21c83a" ServerVersion="1">
@@ -2382,41 +2268,13 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_42">
-              <ui:CalloutScope.CalloutForm>
-                <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID8}" Argument2="{x:Reference __ReferenceID9}">
-                  <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Entering Ticket Number&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_42" TimeoutInSeconds="[DelayShort]" Width="450">
-                    <uca:CallOutActivity.CalloutFieldsCollection>
-                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                    </uca:CallOutActivity.CalloutFieldsCollection>
-                    <uca:CallOutActivity.TargetElementPosition>
-                      <InArgument x:TypeArguments="sd:Rectangle">
-                        <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_83">
-                          <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID8" Name="TargetElementPosition" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetElementPosition>
-                    <uca:CallOutActivity.TargetWindowHandle>
-                      <InArgument x:TypeArguments="s:IntPtr">
-                        <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_84">
-                          <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID9" Name="TargetWindowHandle" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetWindowHandle>
-                  </uca:CallOutActivity>
-                </ActivityFunc>
-              </ui:CalloutScope.CalloutForm>
-              <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:CalloutScope.Target>
-            </ui:CalloutScope>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UTL_DELAY_Short workflow" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Utilities\UTL_DELAY_Short.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="LogMessage">
+                  <Literal x:TypeArguments="x:String">Entering Ticket Number</Literal>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_41" InformativeScreenshot="27c60c82c3d2b88559edcfe853e66ca6" Version="V1">
               <p:CVRefresh.DesignTimeCache>
                 <uc:CVCache InformativeScreenshot="18fe821f4a966564cf2ebb104d74fdba" LogicalPosition="0, 103" OcrText="Q Current Session: MYOOOOOOOI -MY 1 session cp&#xA;SCREEN SHARING 120.00&#xA;122.00 Total&#xA;Quantity&#xA;1&#xA;1&#xA;Cash NO. 2&#xA;SmartTag&#xA;METRO .U.HAD 122.00&#xA;NO. 3&#xA;Amount Emergency&#xA;More&#xA;Functions&#xA;Reprint&#xA;Receipt&#xA;Query&#xA;Override&#xA;Receipt Technician&#xA;More&#xA;Mops&#xA;7&#xA;4&#xA;1 Desktop Console&#xA;Everyone&#xA;(21:47:02) Patricio can now view&#xA;and control fre customer's screen.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(21:57:24) [Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;(22:06:31) [Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(22:06:32) [Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;Item refund&#xA;POS Number :&#xA;02 e Recall&#xA;Layaway&#xA;discount&#xA;Assign&#xA;Loyalty&#xA;Card Item Keys&#xA;8&#xA;5&#xA;2&#xA;Space Num&#xA;9&#xA;6&#xA;3&#xA;Back-&#xA;space Quantity&#xA;Void Item&#xA;Yes&#xA;Repeat&#xA;NO&#xA;Total&#xA;Pump&#xA;Control Credit /&#xA;Bank Card" Position="0, 103" ScreenshotGuid="e86c3b80-310c-4bdb-8cf4-d2eb0e21c83a" ServerVersion="1">
@@ -2912,41 +2770,13 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_43">
-              <ui:CalloutScope.CalloutForm>
-                <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID10}" Argument2="{x:Reference __ReferenceID11}">
-                  <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Entering Ticket Date&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_43" TimeoutInSeconds="[DelayShort]" Width="450">
-                    <uca:CallOutActivity.CalloutFieldsCollection>
-                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                    </uca:CallOutActivity.CalloutFieldsCollection>
-                    <uca:CallOutActivity.TargetElementPosition>
-                      <InArgument x:TypeArguments="sd:Rectangle">
-                        <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_85">
-                          <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID10" Name="TargetElementPosition" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetElementPosition>
-                    <uca:CallOutActivity.TargetWindowHandle>
-                      <InArgument x:TypeArguments="s:IntPtr">
-                        <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_86">
-                          <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID11" Name="TargetWindowHandle" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetWindowHandle>
-                  </uca:CallOutActivity>
-                </ActivityFunc>
-              </ui:CalloutScope.CalloutForm>
-              <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:CalloutScope.Target>
-            </ui:CalloutScope>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UTL_DELAY_Short workflow" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Utilities\UTL_DELAY_Short.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="LogMessage">
+                  <Literal x:TypeArguments="x:String">Entering Ticket Date</Literal>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_42" InformativeScreenshot="27c60c82c3d2b88559edcfe853e66ca6" Version="V1">
               <p:CVRefresh.DesignTimeCache>
                 <uc:CVCache InformativeScreenshot="18fe821f4a966564cf2ebb104d74fdba" LogicalPosition="0, 103" OcrText="Q Current Session: MYOOOOOOOI -MY 1 session cp&#xA;SCREEN SHARING 120.00&#xA;122.00 Total&#xA;Quantity&#xA;1&#xA;1&#xA;Cash NO. 2&#xA;SmartTag&#xA;METRO .U.HAD 122.00&#xA;NO. 3&#xA;Amount Emergency&#xA;More&#xA;Functions&#xA;Reprint&#xA;Receipt&#xA;Query&#xA;Override&#xA;Receipt Technician&#xA;More&#xA;Mops&#xA;7&#xA;4&#xA;1 Desktop Console&#xA;Everyone&#xA;(21:47:02) Patricio can now view&#xA;and control fre customer's screen.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(21:57:24) [Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;(22:06:31) [Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(22:06:32) [Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;Item refund&#xA;POS Number :&#xA;02 e Recall&#xA;Layaway&#xA;discount&#xA;Assign&#xA;Loyalty&#xA;Card Item Keys&#xA;8&#xA;5&#xA;2&#xA;Space Num&#xA;9&#xA;6&#xA;3&#xA;Back-&#xA;space Quantity&#xA;Void Item&#xA;Yes&#xA;Repeat&#xA;NO&#xA;Total&#xA;Pump&#xA;Control Credit /&#xA;Bank Card" Position="0, 103" ScreenshotGuid="e86c3b80-310c-4bdb-8cf4-d2eb0e21c83a" ServerVersion="1">
@@ -3367,9 +3197,7 @@
               <TryCatch.Try>
                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NAMOS_Numpad workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Utilities/UTL_NAMOS_Numpad.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="Numkeys">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TicketDate" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Numkeys">[TicketDate]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </TryCatch.Try>
@@ -3444,44 +3272,16 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_44">
-              <ui:CalloutScope.CalloutForm>
-                <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID12}" Argument2="{x:Reference __ReferenceID13}">
-                  <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Clicking Yes Repeat&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_44" TimeoutInSeconds="[DelayShort]" Width="450">
-                    <uca:CallOutActivity.CalloutFieldsCollection>
-                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                    </uca:CallOutActivity.CalloutFieldsCollection>
-                    <uca:CallOutActivity.TargetElementPosition>
-                      <InArgument x:TypeArguments="sd:Rectangle">
-                        <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_87">
-                          <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID12" Name="TargetElementPosition" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetElementPosition>
-                    <uca:CallOutActivity.TargetWindowHandle>
-                      <InArgument x:TypeArguments="s:IntPtr">
-                        <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_88">
-                          <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID13" Name="TargetWindowHandle" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetWindowHandle>
-                  </uca:CallOutActivity>
-                </ActivityFunc>
-              </ui:CalloutScope.CalloutForm>
-              <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:CalloutScope.Target>
-            </ui:CalloutScope>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UTL_DELAY_Short workflow" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Utilities\UTL_DELAY_Short.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="LogMessage">
+                  <Literal x:TypeArguments="x:String">Clicking Yes Repeat</Literal>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_43" InformativeScreenshot="2a4c0e8c40f4da8be7f552f2d1e15a91" Version="V1">
               <p:CVRefresh.DesignTimeCache>
-                <uc:CVCache InformativeScreenshot="aade18f97e434a81103365b90cb75508" LogicalPosition="0, 103" OcrText="Web Rep Console&#xD;&#xA;I'Veb Rep Console - Patricio Ca X +&#xD;&#xA;https:!ichevron.beyondtrustcloud.com/console#&#xD;&#xA;Orchestrator - CVX Orchestrator - ACN OrchestiG —ion Proce...&#xD;&#xA;04 UiPath Academy&#xD;&#xA;0.00&#xD;&#xA;Amount&#xD;&#xA;120.00&#xD;&#xA;05 Document - Web uscript.shell popup... W Fome - Workday .45:42 Cool Kids - Illusträti... UiPath Academy UiPath V.arketplace&#xD;&#xA;Current Session: MY000000015P1-RSS 1 session&#xD;&#xA;SCREEN SHARING Total Emergency&#xD;&#xA;More&#xD;&#xA;Functions&#xD;&#xA;Reprint&#xD;&#xA;Receipt&#xD;&#xA;Override&#xD;&#xA;Receipt&#xD;&#xA;A)tt Technician&#xD;&#xA;Quantity&#xD;&#xA;1 SmartTag More&#xD;&#xA;MOPS 21.&#xD;&#xA;Ouantitv&#xD;&#xA;Item&#xD;&#xA;Void Item&#xD;&#xA;Yes&#xD;&#xA;Repeat&#xD;&#xA;NO UiPath Community... GitHub&#xD;&#xA;Desktop Console&#xD;&#xA;Everyone&#xD;&#xA;Patricio can now view&#xD;&#xA;and control fre customer's screen.&#xD;&#xA;[Paffjcio You have&#xD;&#xA;been inactive in this session for 9&#xD;&#xA;and are about to be removed.&#xD;&#xA;[Paffjcio Thankyou.&#xD;&#xA;You will remain in the session.&#xD;&#xA;[Paffjcio You have&#xD;&#xA;been inactive in this session for 9&#xD;&#xA;and are about to be removed.&#xD;&#xA;(21:33:25) [Paffjcio Thankyou.&#xD;&#xA;You will remain in the session. Item Keys&#xD;&#xA;2&#xD;&#xA;Space Num&#xD;&#xA;-4&#xD;&#xA;Item refund&#xD;&#xA;0K? [Y/N]&#xD;&#xA;01 02 03 Rec all&#xD;&#xA;Layaway&#xD;&#xA;Item&#xD;&#xA;discount&#xD;&#xA;Card&#xD;&#xA;Pump&#xD;&#xA;Control Credit /&#xD;&#xA;Bank Card" Position="0, 103" ScreenshotGuid="094ebf24-cd68-4bdd-a1a2-52c8f44288ae" ServerVersion="1">
+                <uc:CVCache InformativeScreenshot="aade18f97e434a81103365b90cb75508" LogicalPosition="0, 103" OcrText="Web Rep Console&#xA;I'Veb Rep Console - Patricio Ca X +&#xA;https:!ichevron.beyondtrustcloud.com/console#&#xA;Orchestrator - CVX Orchestrator - ACN OrchestiG —ion Proce...&#xA;04 UiPath Academy&#xA;0.00&#xA;Amount&#xA;120.00&#xA;05 Document - Web uscript.shell popup... W Fome - Workday .45:42 Cool Kids - Illusträti... UiPath Academy UiPath V.arketplace&#xA;Current Session: MY000000015P1-RSS 1 session&#xA;SCREEN SHARING Total Emergency&#xA;More&#xA;Functions&#xA;Reprint&#xA;Receipt&#xA;Override&#xA;Receipt&#xA;A)tt Technician&#xA;Quantity&#xA;1 SmartTag More&#xA;MOPS 21.&#xA;Ouantitv&#xA;Item&#xA;Void Item&#xA;Yes&#xA;Repeat&#xA;NO UiPath Community... GitHub&#xA;Desktop Console&#xA;Everyone&#xA;Patricio can now view&#xA;and control fre customer's screen.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;[Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(21:33:25) [Paffjcio Thankyou.&#xA;You will remain in the session. Item Keys&#xA;2&#xA;Space Num&#xA;-4&#xA;Item refund&#xA;0K? [Y/N]&#xA;01 02 03 Rec all&#xA;Layaway&#xA;Item&#xA;discount&#xA;Card&#xA;Pump&#xA;Control Credit /&#xA;Bank Card" Position="0, 103" ScreenshotGuid="094ebf24-cd68-4bdd-a1a2-52c8f44288ae" ServerVersion="1">
                   <uc:CVCache.CvTables>
                     <x:Array Type="uc:CvTableInfo">
                       <uc:CvTableInfo>
@@ -3919,7 +3719,7 @@
             </p:CVRefresh>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_25">
               <TryCatch.Try>
-                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (1220,638,87,86)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Repeat' (1240,684,49,13)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Yes' (1252,668,24,10)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_44" InformativeScreenshot="5254cc719525fbc71c4663b046ea96d5" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (1220,638,87,86)&quot; +&#xA;&quot;Anchor: Text 'Repeat' (1240,684,49,13)&quot; +&#xA;&quot;Anchor: Text 'Yes' (1252,668,24,10)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_44" InformativeScreenshot="5254cc719525fbc71c4663b046ea96d5" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -3972,44 +3772,16 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_45">
-              <ui:CalloutScope.CalloutForm>
-                <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID14}" Argument2="{x:Reference __ReferenceID15}">
-                  <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Clicking Void Item&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_45" TimeoutInSeconds="[DelayShort]" Width="450">
-                    <uca:CallOutActivity.CalloutFieldsCollection>
-                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                    </uca:CallOutActivity.CalloutFieldsCollection>
-                    <uca:CallOutActivity.TargetElementPosition>
-                      <InArgument x:TypeArguments="sd:Rectangle">
-                        <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_89">
-                          <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID14" Name="TargetElementPosition" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetElementPosition>
-                    <uca:CallOutActivity.TargetWindowHandle>
-                      <InArgument x:TypeArguments="s:IntPtr">
-                        <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_90">
-                          <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID15" Name="TargetWindowHandle" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetWindowHandle>
-                  </uca:CallOutActivity>
-                </ActivityFunc>
-              </ui:CalloutScope.CalloutForm>
-              <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:CalloutScope.Target>
-            </ui:CalloutScope>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UTL_DELAY_Short workflow" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Utilities\UTL_DELAY_Short.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="LogMessage">
+                  <Literal x:TypeArguments="x:String">Clicking Void Item</Literal>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_44" InformativeScreenshot="079db6d9fa0e47655ecc14aa86459727" Version="V1">
               <p:CVRefresh.DesignTimeCache>
-                <uc:CVCache InformativeScreenshot="a48daba21a31b091a8433033dcaae7fe" LogicalPosition="0, 103" OcrText="Web Rep Console&#xD;&#xA;I'Veb Rep Console - Patricio Ca X +&#xD;&#xA;https:!ichevron.beyondtrustcloud.com/console#&#xD;&#xA;Orchestrator - CVX Orchestrator - ACN OrchestiG —ion Proce... UiPath Academy&#xD;&#xA;0.00&#xD;&#xA;NO. 3&#xD;&#xA;Amount&#xD;&#xA;120.00&#xD;&#xA;05 Document - Web uscript.shell popup... W Fome - Workday Cool Kids - Illusträti... UiPath Academy UiPath V.arketplace&#xD;&#xA;Current Session: MY000000015P1-RSS 1 session&#xD;&#xA;SCREEN SHARING Total NO. 2&#xD;&#xA;03 Emergency&#xD;&#xA;More&#xD;&#xA;Functions&#xD;&#xA;Reprint&#xD;&#xA;Receipt&#xD;&#xA;Override&#xD;&#xA;Receipt&#xD;&#xA;A)tt Technician&#xD;&#xA;Quantity&#xD;&#xA;1 SmartTag More&#xD;&#xA;MOPS&#xD;&#xA;7&#xD;&#xA;4&#xD;&#xA;1 UiPath Community... GitHub&#xD;&#xA;Desktop Console&#xD;&#xA;Everyone&#xD;&#xA;Patricio can now view&#xD;&#xA;and control fre customer's screen.&#xD;&#xA;[Paffjcio You have&#xD;&#xA;been inactive in this session for 9&#xD;&#xA;and are about to be removed.&#xD;&#xA;[Paffjcio Thankyou.&#xD;&#xA;You will remain in the session.&#xD;&#xA;[Paffjcio You have&#xD;&#xA;been inactive in this session for 9&#xD;&#xA;and are about to be removed.&#xD;&#xA;(21:33:25) [Paffjcio Thankyou.&#xD;&#xA;You will remain in the session.&#xD;&#xA;Item refund&#xD;&#xA;01 02 04 Rec all&#xD;&#xA;Layaway&#xD;&#xA;Item&#xD;&#xA;discount&#xD;&#xA;Card Item Keys&#xD;&#xA;8&#xD;&#xA;5&#xD;&#xA;2&#xD;&#xA;Space Num&#xD;&#xA;9&#xD;&#xA;6&#xD;&#xA;3&#xD;&#xA;sack-&#xD;&#xA;space Ouantitv&#xD;&#xA;Item&#xD;&#xA;Void Item&#xD;&#xA;Repe at&#xD;&#xA;Total&#xD;&#xA;Pump&#xD;&#xA;Control Credit /&#xD;&#xA;Bank Card" Position="0, 103" ScreenshotGuid="2d3c12c1-150b-47fc-b8ca-bfde10461b42" ServerVersion="1">
+                <uc:CVCache InformativeScreenshot="a48daba21a31b091a8433033dcaae7fe" LogicalPosition="0, 103" OcrText="Web Rep Console&#xA;I'Veb Rep Console - Patricio Ca X +&#xA;https:!ichevron.beyondtrustcloud.com/console#&#xA;Orchestrator - CVX Orchestrator - ACN OrchestiG —ion Proce... UiPath Academy&#xA;0.00&#xA;NO. 3&#xA;Amount&#xA;120.00&#xA;05 Document - Web uscript.shell popup... W Fome - Workday Cool Kids - Illusträti... UiPath Academy UiPath V.arketplace&#xA;Current Session: MY000000015P1-RSS 1 session&#xA;SCREEN SHARING Total NO. 2&#xA;03 Emergency&#xA;More&#xA;Functions&#xA;Reprint&#xA;Receipt&#xA;Override&#xA;Receipt&#xA;A)tt Technician&#xA;Quantity&#xA;1 SmartTag More&#xA;MOPS&#xA;7&#xA;4&#xA;1 UiPath Community... GitHub&#xA;Desktop Console&#xA;Everyone&#xA;Patricio can now view&#xA;and control fre customer's screen.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;[Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(21:33:25) [Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;Item refund&#xA;01 02 04 Rec all&#xA;Layaway&#xA;Item&#xA;discount&#xA;Card Item Keys&#xA;8&#xA;5&#xA;2&#xA;Space Num&#xA;9&#xA;6&#xA;3&#xA;sack-&#xA;space Ouantitv&#xA;Item&#xA;Void Item&#xA;Repe at&#xA;Total&#xA;Pump&#xA;Control Credit /&#xA;Bank Card" Position="0, 103" ScreenshotGuid="2d3c12c1-150b-47fc-b8ca-bfde10461b42" ServerVersion="1">
                   <uc:CVCache.CvTables>
                     <x:Array Type="uc:CvTableInfo">
                       <uc:CvTableInfo>
@@ -4479,7 +4251,7 @@
             </p:CVRefresh>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_26">
               <TryCatch.Try>
-                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1222,554,84,79)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Void Item' (1232,588,63,10)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_45" InformativeScreenshot="550c5ae409760e7d99d51a2b9d97328a" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1222,554,84,79)&quot; +&#xA;&quot;Anchor: Text 'Void Item' (1232,588,63,10)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_45" InformativeScreenshot="550c5ae409760e7d99d51a2b9d97328a" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -4531,44 +4303,16 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:CalloutScope DisplayName="Callout" sap:VirtualizedContainerService.HintSize="438,189" sap2010:WorkflowViewState.IdRef="CalloutScope_46">
-              <ui:CalloutScope.CalloutForm>
-                <ActivityFunc x:TypeArguments="sd:Rectangle, s:IntPtr, stt:Task" Argument1="{x:Reference __ReferenceID16}" Argument2="{x:Reference __ReferenceID17}">
-                  <uca:CallOutActivity CalloutFieldsInputData="{x:Null}" CalloutFieldsOutputData="{x:Null}" Dismissed="{x:Null}" Result="{x:Null}" SelectedButton="{x:Null}" BackgroundColor="#FFFFFFFF" CalloutSchema="%[{&quot;tag&quot;:&quot;h3&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;Clicking Total&quot;,&quot;key&quot;:&quot;title&quot;,&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;mask&quot;:false,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" CalloutTheme="{}{&quot;Activities&quot;:[&quot;CALLOUT&quot;],&quot;Id&quot;:&quot;100100&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cerulean.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cerulean.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/callout-cerulean-white.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" DisplayName="Callout Designer" GenerateInputFields="True" Height="100" sap:VirtualizedContainerService.HintSize="244,81" sap2010:WorkflowViewState.IdRef="CallOutActivity_46" TimeoutInSeconds="[DelayShort]" Width="450">
-                    <uca:CallOutActivity.CalloutFieldsCollection>
-                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                    </uca:CallOutActivity.CalloutFieldsCollection>
-                    <uca:CallOutActivity.TargetElementPosition>
-                      <InArgument x:TypeArguments="sd:Rectangle">
-                        <DelegateArgumentValue x:TypeArguments="sd:Rectangle" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_91">
-                          <DelegateInArgument x:TypeArguments="sd:Rectangle" x:Name="__ReferenceID16" Name="TargetElementPosition" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetElementPosition>
-                    <uca:CallOutActivity.TargetWindowHandle>
-                      <InArgument x:TypeArguments="s:IntPtr">
-                        <DelegateArgumentValue x:TypeArguments="s:IntPtr" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_92">
-                          <DelegateInArgument x:TypeArguments="s:IntPtr" x:Name="__ReferenceID17" Name="TargetWindowHandle" />
-                        </DelegateArgumentValue>
-                      </InArgument>
-                    </uca:CallOutActivity.TargetWindowHandle>
-                  </uca:CallOutActivity>
-                </ActivityFunc>
-              </ui:CalloutScope.CalloutForm>
-              <ui:CalloutScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b47aca7e-0d02-4756-afa0-6b577b914c30" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='IFL Tester Bot*' /&gt;&lt;wnd omit:cls='Intermediate D3D Window' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:CalloutScope.Target>
-            </ui:CalloutScope>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UTL_DELAY_Short workflow" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Utilities\UTL_DELAY_Short.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="LogMessage">
+                  <Literal x:TypeArguments="x:String">Clicking Total</Literal>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <p:CVRefresh DelayBefore="{x:Null}" TimeoutMS="{x:Null}" DisplayName="CV refresh" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="CVRefresh_45" InformativeScreenshot="37aee816a438014bc5940659595eef26" Version="V1">
               <p:CVRefresh.DesignTimeCache>
-                <uc:CVCache InformativeScreenshot="e309f0da50d24499ba5a99d37af2fd68" LogicalPosition="0, 103" OcrText="Web Rep Console&#xD;&#xA;I'Veb Rep Console - Patricio Ca X +&#xD;&#xA;https:!ichevron.beyondtrustcloud.com/console#&#xD;&#xA;Orchestrator - CVX Orchestrator - ACN OrchestiG —ion Proce... UiPath Academy&#xD;&#xA;-2.00&#xD;&#xA;NO. 3&#xD;&#xA;Amount&#xD;&#xA;120.00&#xD;&#xA;05 Document - Web uscript.shell popup... W Fome - Workday •48:51 Cool Kids - Illusträti... UiPath Academy UiPath V.arketplace&#xD;&#xA;Current Session: MY000000015P1-RSS 1 session&#xD;&#xA;SCREEN SHARING Total NO. 2&#xD;&#xA;03 Emergency&#xD;&#xA;More&#xD;&#xA;Functions&#xD;&#xA;Reprint&#xD;&#xA;Receipt&#xD;&#xA;Override&#xD;&#xA;Receipt&#xD;&#xA;A)tt Technician&#xD;&#xA;Quantity&#xD;&#xA;1 SmartTag More&#xD;&#xA;MOPS&#xD;&#xA;7&#xD;&#xA;4&#xD;&#xA;1 21.&#xD;&#xA;Ouantitv&#xD;&#xA;Item&#xD;&#xA;Void Item&#xD;&#xA;Repe at&#xD;&#xA;Total UiPath Community... GitHub&#xD;&#xA;Desktop Console&#xD;&#xA;Everyone&#xD;&#xA;Patricio can now view&#xD;&#xA;and control fre customer's screen.&#xD;&#xA;[Paffjcio You have&#xD;&#xA;been inactive in this session for 9&#xD;&#xA;and are about to be removed.&#xD;&#xA;[Paffjcio Thankyou.&#xD;&#xA;You will remain in the session.&#xD;&#xA;[Paffjcio You have&#xD;&#xA;been inactive in this session for 9&#xD;&#xA;and are about to be removed.&#xD;&#xA;(21:33:25) [Paffjcio Thankyou.&#xD;&#xA;You will remain in the session.&#xD;&#xA;Item refund&#xD;&#xA;01 02 04 Rec all&#xD;&#xA;Layaway&#xD;&#xA;Item&#xD;&#xA;discount&#xD;&#xA;Card Item Keys&#xD;&#xA;8&#xD;&#xA;5&#xD;&#xA;2&#xD;&#xA;Space Num&#xD;&#xA;9&#xD;&#xA;6&#xD;&#xA;3&#xD;&#xA;sack-&#xD;&#xA;space&#xD;&#xA;Pump&#xD;&#xA;Control Credit /&#xD;&#xA;Bank Card" Position="0, 103" ScreenshotGuid="cf8747f6-531c-478f-b5a0-4fa156be817b" ServerVersion="1">
+                <uc:CVCache InformativeScreenshot="e309f0da50d24499ba5a99d37af2fd68" LogicalPosition="0, 103" OcrText="Web Rep Console&#xA;I'Veb Rep Console - Patricio Ca X +&#xA;https:!ichevron.beyondtrustcloud.com/console#&#xA;Orchestrator - CVX Orchestrator - ACN OrchestiG —ion Proce... UiPath Academy&#xA;-2.00&#xA;NO. 3&#xA;Amount&#xA;120.00&#xA;05 Document - Web uscript.shell popup... W Fome - Workday •48:51 Cool Kids - Illusträti... UiPath Academy UiPath V.arketplace&#xA;Current Session: MY000000015P1-RSS 1 session&#xA;SCREEN SHARING Total NO. 2&#xA;03 Emergency&#xA;More&#xA;Functions&#xA;Reprint&#xA;Receipt&#xA;Override&#xA;Receipt&#xA;A)tt Technician&#xA;Quantity&#xA;1 SmartTag More&#xA;MOPS&#xA;7&#xA;4&#xA;1 21.&#xA;Ouantitv&#xA;Item&#xA;Void Item&#xA;Repe at&#xA;Total UiPath Community... GitHub&#xA;Desktop Console&#xA;Everyone&#xA;Patricio can now view&#xA;and control fre customer's screen.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;[Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;[Paffjcio You have&#xA;been inactive in this session for 9&#xA;and are about to be removed.&#xA;(21:33:25) [Paffjcio Thankyou.&#xA;You will remain in the session.&#xA;Item refund&#xA;01 02 04 Rec all&#xA;Layaway&#xA;Item&#xA;discount&#xA;Card Item Keys&#xA;8&#xA;5&#xA;2&#xA;Space Num&#xA;9&#xA;6&#xA;3&#xA;sack-&#xA;space&#xA;Pump&#xA;Control Credit /&#xA;Bank Card" Position="0, 103" ScreenshotGuid="cf8747f6-531c-478f-b5a0-4fa156be817b" ServerVersion="1">
                   <uc:CVCache.CvTables>
                     <x:Array Type="uc:CvTableInfo">
                       <uc:CvTableInfo>
@@ -5045,7 +4789,7 @@
             </p:CVRefresh>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_27">
               <TryCatch.Try>
-                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1221,816,85,81)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Total' (1247,853,32,10)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_46" InformativeScreenshot="4f09618a93dc934e9b6c07f7add42ab3" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (1221,816,85,81)&quot; +&#xA;&quot;Anchor: Text 'Total' (1247,853,32,10)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_46" InformativeScreenshot="4f09618a93dc934e9b6c07f7add42ab3" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
                   <p:CvClickWithDescriptor.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
