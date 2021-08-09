@@ -43,7 +43,7 @@
     } 
 
     function displayLoading() {
-      var myWindow = window.open("",'NewWin', 'toolbar=no,status=no,width=250,height=150,titlebar=no,top=50,left=1600,location=no');
+      var myWindow = window.open("",'NewWin', 'toolbar=no,status=no,width=260,height=170,titlebar=no,top=50,left=1600,location=no');
       myWindow.document.write("<html>");
       myWindow.document.write("<head>");
       myWindow.document.write("<title>IFL Tester Bot</title>");
